@@ -1,0 +1,16 @@
+[Unit]
+SourcePath=/etc/init.d/firewall.sh
+Description=Simple Firewall
+
+[Service]
+Type=forking
+Restart=no
+KillMode=process
+RemainAfterExit=yes
+ExecStart=/etc/init.d/firewall.sh start
+ExecReload=/etc/init.d/firewall.sh restart
+ExecStop=/etc/init.d/firewall.sh clear
+
+[Install]
+WantedBy=multi-user.target
+
