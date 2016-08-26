@@ -1,7 +1,11 @@
 URxvt.scrollBar: false
 
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=15
-URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=15:style=Bold
+
+! URxvt.font: xft:DejaVu Sans Mono:pixelsize=15
+! URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=15:style=Bold
+
+URxvt.font: xft:mononoki-Regular:pixelsize=15
+URxvt.boldFont: xft:mononoki-bold:pixelsize=15:style=Bold
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard
