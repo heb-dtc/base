@@ -2,9 +2,9 @@ CURRENT_DIR = $(shell pwd)
 
 GITCONFIG = $(HOME)/.gitconfig
 
-all: $(GITCONFIG)
+all: gitconf
 
-$(GITCONFIG): gitconfig
-	ln -s $(CURRENT_DIR)/gitconfig $(GITCONFIG)
+gitconf: gitconfig
+	ln -sf $(CURRENT_DIR)/gitconfig $(GITCONFIG)
 
 .PHONY: all

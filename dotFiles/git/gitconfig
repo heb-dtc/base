@@ -1,6 +1,7 @@
 [user]
-	email = florent.noelfl@gmail.com
-	name = Florent NOEL
+    email = florent.noelfl@gmail.com
+    name = "Florent NOEL"
+    identity = taf
 [color]
     ui = auto
 [alias]
@@ -11,3 +12,9 @@
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 [push]
 	default = simple
+[identity "taf"]
+    name = "FLorent NOEL"
+    email = fnoel@genymobile.com
+[identity "perso"]
+    name = "Florent NOEL"
+    email = florent.noelfl@gmail.com
