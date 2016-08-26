@@ -54,14 +54,24 @@ plugins=(git)
 
 # User configuration
 
+export ANDROID_HOME=$HOME/dev/utils/android-sdk
+
+export ANDROID_NDK_HOME=$HOME/dev/utils/android-ndk-r10e
+
+export PATH="/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/utils/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/utils/android-sdk/platform-tools:/home/flo/dev/utils/android-sdk/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/utils/android-sdk/build-tools/23.0.3/"
 # export MANPATH="/usr/local/man:$MANPATH"
 export GIT_EDITOR=vim
 
-export JAVA_HOME='/usr/java/jdk1.7.0_51'
+export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
+export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
 
-export SONAR_RUNER_HOME=$HOME/taf/dev/utils/sonar-runer-2.4
+export QT_SELECT=5
+
+#export QMAKE='/home/flo/dev/utils/qt-4.8.6/qmake'
 
 alias gw='./gradlew'
+
+alias woof='/usr/bin/python2.7 /home/flo/dev/tools/woof'
 
 export GREP_COLOR=31
 alias grep='grep --color=auto'
@@ -69,6 +79,7 @@ alias grep='grep --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls --color=auto -lh'
 alias lll='ls --color=auto -lh | less'
+alias autorandr='~/dev/utils/autorandr/autorandr'
 source $ZSH/oh-my-zsh.sh
 
 alias tigs='tig status'
@@ -77,6 +88,22 @@ alias tigs='tig status'
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
+
+export VISUAL='vim'
+
+export USE_CCACHE=1
+export CCACHE_DIR=/home/flo/.ccache
+
+export GOPATH=/home/flo/dev/workspace/go_workspace
+
+#start ssh-agent
+if ! pgrep -u $USER ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+        eval $(<~/.ssh-agent-thing)
+fi
+ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
