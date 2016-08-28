@@ -77,7 +77,8 @@ export GREP_COLOR=31
 alias grep='grep --color=auto'
 
 alias ls='ls --color=auto'
-alias ll='ls --color=auto -lah'
+alias ll='ls --color=auto -lh'
+alias la='ls --color=auto -lah'
 alias lll='ls --color=auto -lh | less'
 alias autorandr='~/dev/utils/autorandr/autorandr'
 source $ZSH/oh-my-zsh.sh
