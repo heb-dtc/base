@@ -1,7 +1,7 @@
 [user]
-    email = florent.noelfl@gmail.com
     name = "Florent NOEL"
-    identity = taf
+    email = "fnoel@genymobile.com"
+    identity = "taf"
 [color]
     ui = auto
 [alias]
