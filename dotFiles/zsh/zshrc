@@ -54,11 +54,11 @@ plugins=(git)
 
 # User configuration
 
-export ANDROID_HOME=$HOME/dev/utils/android-sdk
+export ANDROID_HOME=$HOME/dev/tools/android-sdk-linux
 
 export ANDROID_NDK_HOME=$HOME/dev/utils/android-ndk-r10e
 
-export PATH="/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/utils/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/utils/android-sdk/platform-tools:/home/flo/dev/utils/android-sdk/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/utils/android-sdk/build-tools/23.0.3/"
+export PATH="/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/tools/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/tools/android-sdk-linux/platform-tools:/home/flo/dev/tools/android-sdk-linux/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/tools/android-sdk-linux/build-tools/23.0.3/"
 # export MANPATH="/usr/local/man:$MANPATH"
 export GIT_EDITOR=vim
 
