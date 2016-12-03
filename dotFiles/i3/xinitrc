@@ -1,5 +1,6 @@
 #!/bin/bash
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+xrandr --dpi 150
 setxkbmap fr
 exec i3
 exec xss-lock i3lock -n -i ~/.i3/Pictures/lock.png &

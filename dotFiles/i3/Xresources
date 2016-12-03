@@ -1,10 +1,16 @@
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.hintstyle: hintfull
+! Xft.dpi:       220
+
 URxvt.scrollBar: false
 
-! URxvt.font: xft:DejaVu Sans Mono:pixelsize=15
-! URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=15:style=Bold
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=20
+URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=15:style=Bold
 
-URxvt.font: xft:mononoki-Regular:pixelsize=13
-URxvt.boldFont: xft:mononoki-bold:pixelsize=13:style=Bold
+!URxvt.font: xft:mononoki-Regular:pixelsize=13
+!URxvt.boldFont: xft:mononoki-bold:pixelsize=13:style=Bold
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard
