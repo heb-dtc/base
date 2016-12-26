@@ -4,6 +4,18 @@ SCREENSHOT_DESTINATION_FOLDER="/home/$USER/screenshot"
 FFMPEG="ffmpeg"
 AVCONV="avconv"
 
+function cleanGradleCache() {
+    if [ $# -ne 1 ]; then
+        echo "Usage: provide the name of the dependency you wish to :burn:"
+        echo "Example: cleanGradleCache com.android.support"
+        return
+    fi
+    
+    local id=$1
+
+    find ~/.gradle/caches/ -type d -name "$id" -prune -exec rm -rf "{}" \; -print
+}
+
 function checkchack() {
 
     if ! type "$AVCONV" >/dev/null; then
