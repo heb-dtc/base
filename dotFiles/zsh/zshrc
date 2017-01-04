@@ -80,10 +80,16 @@ alias ls='ls --color=auto'
 alias ll='ls --color=auto -lh'
 alias la='ls --color=auto -lah'
 alias lll='ls --color=auto -lh | less'
-alias autorandr='~/dev/utils/autorandr/autorandr'
+#alias autorandr='~/dev/utils/autorandr/autorandr'
 source $ZSH/oh-my-zsh.sh
 
 alias tigs='tig status'
+alias spotifyScaled='spotify --force-device-scale-factor=1.5'
+alias steamLibFix='LIBGL_DRI3_DISABLE=1 steam'
+alias hangout='google-chrome-stable --app-id=knipolnnllmklapflnccelgolnpehhpl'
+alias postman='google-chrome-stable --app-id=fhbjgbiflinjbdggehcddcbncdddomop'
+alias pocket='google-chrome-stable --app-id=mjcnijlhddpbdemagnpefmlkjdagkogk'
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
