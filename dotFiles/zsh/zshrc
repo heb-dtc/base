@@ -90,6 +90,9 @@ alias hangout='google-chrome-stable --app-id=knipolnnllmklapflnccelgolnpehhpl'
 alias postman='google-chrome-stable --app-id=fhbjgbiflinjbdggehcddcbncdddomop'
 alias pocket='google-chrome-stable --app-id=mjcnijlhddpbdemagnpefmlkjdagkogk'
 
+alias copier='xclip -selection clipboard'
+alias coller='xclip -selection clipboard -o'
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 

@@ -8,19 +8,20 @@ Xft.lcdfilter: lcddefault
 
 URxvt.scrollBar: false
 
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=20
-URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=15:style=Bold
+! URxvt.font: xft:DejaVu Sans Mono:pixelsize=20
+! URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=15:style=Bold
 
-!URxvt.font: xft:mononoki-Regular:pixelsize=13
-!URxvt.boldFont: xft:mononoki-bold:pixelsize=13:style=Bold
+URxvt.font: xft:mononoki-Regular:pixelsize=20
+URxvt.boldFont: xft:mononoki-bold:pixelsize=20:style=Bold
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard
 URxvt.keysym.C-S-c: perl:clipboard:copy
 URxvt.keysym.C-S-v: perl:clipboard:paste
 
-! URxvt*underlineURLs:  False
-! URxvt*urlLauncher: /usr/bin/firefox
+URxvt.saveLines: -1
+URxvt.underlineURLs:  true
+URxvt.urlLauncher: /usr/bin/firefox
 ! URxvt*matcher.button: 1
 
 ! URxvt.colorUL: #4682B4
@@ -44,8 +45,11 @@ URxvt.keysym.C-S-Down: \033[1;6B
 URxvt.keysym.C-S-Right: \033[1;6C
 URXvt.keysym.C-S-Left: \033[1;6D]]]]]]]]]]]]]]
 
-! URxvt*keysym.Shift-Control-C: perl:clipboard:copy
-! URxvt*keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
 
-URxvt.clipboard.copycmd:  xsel -ib
-URxvt.clipboard.pastecmd: xsel -ob
+! URxvt.clipboard.copycmd:  xsel -ib
+! URxvt.clipboard.pastecmd: xsel -ob
