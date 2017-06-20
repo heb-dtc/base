@@ -4,7 +4,7 @@ Xft.rgba: rgb
 Xft.hintstyle: hintfull
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
-! Xft.dpi:       220
+Xft.dpi: 192
 
 URxvt.scrollBar: false
 
