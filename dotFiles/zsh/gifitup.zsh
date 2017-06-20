@@ -27,5 +27,5 @@ function gifItUp() {
     local startPos=$2
     local duration=$3
 
-    ffmpeg -ss $DEFAULT_START_POS -i $file -pix_fmt $PIX_FORMAT -r $FPS -s $SIZE -t $DEFAULT_DURATION $DEFAULT_OUTPUT_FILE
+    ffmpeg -ss $DEFAULT_START_POS -i $file -pix_fmt $PIX_FORMAT -r $FPS -s $SIZE -t $duration $DEFAULT_OUTPUT_FILE
 }

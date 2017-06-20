@@ -4,6 +4,7 @@ SCREENSHOT_DESTINATION_FOLDER="/home/$USER/screenshot"
 FFMPEG="ffmpeg"
 AVCONV="avconv"
 
+#nuke the local gradle cache
 function cleanGradleCache() {
     if [ $# -ne 1 ]; then
         echo "Usage: provide the name of the dependency you wish to :burn:"
@@ -16,16 +17,43 @@ function cleanGradleCache() {
     find ~/.gradle/caches/ -type d -name "$id" -prune -exec rm -rf "{}" \; -print
 }
 
-function checkchack() {
+function multipleDevices() {
+    adb devices | wc -l 
+}
 
-    if ! type "$AVCONV" >/dev/null; then
-       echo 'bla'
+#check if adb detects any devices, return TRUE if at least one is found, FALSE otherwise
+function noDeviceConnected() {
+    local number=$(adb devices | wc -l) 
+    if [ $number = 2 ]; then
+        return 1;
     fi
+    
+    return 0;
+}
 
-   echo 'blo'
+function deviceTcpConnect() {
+    if [[ $(adb devices | wc -l) = 2 ]]; then
+        echo "No adb device connected"
+        return
+    fi
+    
+    local deviceIp=$(adb shell ip addr show wlan0 | grep -Eo 'inet ([0-9]*\.){3}[0-9]*' | awk '{print $2}')
+    echo "Attempting to connect device with IP" $deviceIp
+
+    adb tcpip 5555
+    adb connect $deviceIp:5555
+}
+
+function deviceTcpDisconnect() {
+    adb usb
 }
 
 function deviceMakeGif() {
+    #if noDeviceConnected; then
+    #    echo "No adb device connected"
+    #    return
+    #fi
+
     if [ $# -ne 2 ]; then
         echo "Usage: provide a name for the gif and the time of recording in seconds"
         echo "Example: deviceMakeGif myGif 10">&2
