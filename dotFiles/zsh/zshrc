@@ -93,6 +93,8 @@ alias pocket='google-chrome-stable --app-id=mjcnijlhddpbdemagnpefmlkjdagkogk'
 alias copier='xclip -selection clipboard'
 alias coller='xclip -selection clipboard -o'
 
+alias dc='docker-compose'
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
