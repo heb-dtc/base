@@ -12,6 +12,8 @@
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 [push]
 	default = simple
+[pull]
+    rebase = true
 [identity "taf"]
     name = "FLorent NOEL"
     email = florent.noel@drust.io
