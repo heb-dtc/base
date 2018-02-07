@@ -10,6 +10,7 @@
     st = status
     br = branch
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    brennen = !git branch --merged master | egrep -v "master" | xargs git branch -d
 [push]
 	default = simple
 [pull]
