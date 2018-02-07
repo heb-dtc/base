@@ -15,7 +15,7 @@ URxvt.font: xft:mononoki-Regular:pixelsize=20
 URxvt.boldFont: xft:mononoki-bold:pixelsize=20:style=Bold
 
 URxvt.perl-lib: .urxvt/perl
-URxvt.perl-ext-common: default,clipboard
+URxvt.perl-ext-common: default,clipboard,resize-font
 URxvt.keysym.C-S-c: perl:clipboard:copy
 URxvt.keysym.C-S-v: perl:clipboard:paste
 
