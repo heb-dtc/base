@@ -32,6 +32,8 @@ set_from_resource $red color1
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+focus_follows_mouse no
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -187,21 +189,31 @@ bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 # finds out, if available)
 bar {
   colors {
-      # Whole color settings
-      background #3c3b37
-      statusline #989898
-      separator  #989898
+      ## config i3block
+      #background #3c3b37
+      #statusline #989898
+      #separator  #989898
 
-      # Type             border  background font
+      # Type              border  background font
       #focused_workspace  #008fff #007fff #ffffff
       #active_workspace   #333333 #5f676a #ffffff
       #inactive_workspace #333333 #222222 #888888
       #urgent_workspace   #d98f93 #990000 #ffffff
       
-      focused_workspace #fdf6e3 #007fff #fdf6e3
+      #focused_workspace #fdf6e3 #007fff #fdf6e3
       #active_workspace #fdf6e3 #6c71c4 #fdf6e3
       #inactive_workspace #002b36 #586e75 #002b36
       #urgent_workspace #d33682 #d33682 #fdf6e3
+      
+      ## config i3 status rust
+      separator #666666
+      background #222222
+      statusline #dddddd
+      focused_workspace #0088CC #0088CC #ffffff
+      active_workspace #333333 #333333 #ffffff
+      inactive_workspace #333333 #333333 #888888
+      urgent_workspace #2f343a #900000 #ffffff 
+
   }
 
   mode dock
@@ -209,7 +221,9 @@ bar {
   position bottom
   font pango:mononoki-Regular 12
   #font pango:DejaVu Sans Mono 12
-  status_command i3blocks #i3status -c ~/.i3/i3status.conf 
+  #status_command i3status -c ~/.i3/i3status.conf 
+  #status_command i3blocks 
+  status_command i3status-rs ~/.i3/i3_status_rust.toml
 }
 
 # Lock and power management stuff
@@ -233,12 +247,26 @@ mode "$mode_system" {
 
 bindsym $mod+p mode "$mode_system"
 
+set $mode_screen Screen configuration (o) ondago, (b) buro, (h) home, (x) true black on
+mode "$mode_screen" {
+    bindsym o exec --no-startup-id autorandr -l ondago, mode "default"
+    bindsym b exec --no-startup-id autorandr -l buro_no_scale, mode "default"
+    bindsym h exec --no-startup-id autorandr -l dual_screen_1200, mode "default"
+    bindsym x exec --no-startup-id xranrd --output HDMI1 --set "Broadcast RGB" "Full" , mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+a mode "$mode_screen"
+
 # Shortcut to show volume control settings window
 bindsym $mod+m exec pavucontrol
  
 # Start some tools 
 exec --no-startup-id nm-applet
-exec --no-startup-id feh --bg-fill ~/.i3/Pictures/genyx.png
+exec --no-startup-id feh --randomize --bg-fill ~/wallpapers/*
 exec --no-startup-id volumeicon
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id xss-lock $Locker
@@ -247,3 +275,4 @@ exec --no-startup-id volumeicon
 #for_window [class="Genymotion"] floating enable; move position 0px 0px;
 for_window [title="Bluetooth Devices"] floating enable;
 for_window [title="Volume Control"] floating enable;
+
