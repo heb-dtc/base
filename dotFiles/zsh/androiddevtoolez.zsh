@@ -3,6 +3,21 @@ GIF_DESTINATION_FOLDER="/home/$USER/gif"
 SCREENSHOT_DESTINATION_FOLDER="/home/$USER/screenshot"
 FFMPEG="ffmpeg"
 AVCONV="avconv"
+TAB_KEY=61
+ENTER_KEY=66
+
+function appLogin() {
+     if [ $# -ne 2 ]; then
+        echo "Usage: provide a username and a password"
+        echo "Example: appLogin user pass"
+        return
+    fi
+    
+    local user=$1
+    local pass=$2
+
+    adb shell input text $user && adb shell input keyevent $TAB_KEY && adb shell input text $pass && adb shell input keyevent $ENTER_KEY
+}
 
 #nuke the local gradle cache
 function cleanGradleCache() {
