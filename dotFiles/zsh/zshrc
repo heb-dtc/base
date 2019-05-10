@@ -92,8 +92,8 @@ alias coller='xclip -selection clipboard -o'
 
 alias dc='docker-compose'
 
-alias gotoSickRage='ssh -NL 8080:localhost:8081 flo@hebus.net'
-alias gotoCouchPotatoes='ssh -NL 8080:localhost:5050 flo@hebus.net'
+alias gotoSickRage='echo localhost:8080; ssh -NL 8080:localhost:8081 flo@hebus.net'
+alias gotoCouchPotatoes='echo localhost:8080; ssh -NL 8080:localhost:5050 flo@hebus.net'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -108,6 +108,13 @@ export CCACHE_DIR=/home/flo/.ccache
 
 export GOPATH=/home/flo/dev/workspace/go_workspace
 
+alias workspace='cd /mnt/dataz/dev/workspace'
+
+drustBranch() {
+    local name=$1
+    git checkout -b $(echo "$(git --no-pager branch | grep '*' | cut -d " " -f2 | cut -d "-" -f2)-$name")
+}
+
 #start ssh-agent
 if ! pgrep -u $USER ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing
@@ -116,6 +123,9 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
         eval $(<~/.ssh-agent-thing)
 fi
 ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
+
+powerline-daemon -q
+. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
