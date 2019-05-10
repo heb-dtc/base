@@ -1,0 +1,8 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "editor.renderIndentGuides": false,
+    "workbench.colorTheme": "Abyss",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.enablePreview": false
+}
