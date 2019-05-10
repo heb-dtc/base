@@ -1,10 +1,5 @@
 icons = "awesome"
-
-[theme]
-name = "solarized-dark"
-
-[theme.overrides]
-#alternating_tint_fg = "#FFFFF"
+theme="solarized-dark"
 
 [[block]]
 block = "disk_space"
@@ -13,23 +8,14 @@ alias = "/"
 info_type = "available"
 unit = "GB"
 interval = 20
-warning = 20.0
-alert = 10.0
 
 [[block]]
 block = "disk_space"
-path = "/home"
-alias = "/home"
+path = "/mnt/dataz/"
+alias = "/workspace"
 info_type = "available"
 unit = "GB"
 interval = 20
-warning = 20.0
-alert = 10.0
-
-[[block]]
-block = "net"
-device = "wlp2s0"
-interval = 5
 
 [[block]]
 block = "memory"
