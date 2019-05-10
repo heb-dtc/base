@@ -1,7 +1,6 @@
 [user]
     name = "Florent NOEL"
-    email = "florent.noel@drust.io"
-    identity = "taf"
+    email = "florent.noelfl@gmail.com"
 [color]
     ui = auto
 [alias]
@@ -15,9 +14,11 @@
 	default = simple
 [pull]
     rebase = true
-[identity "taf"]
-    name = "FLorent NOEL"
-    email = florent.noel@drust.io
-[identity "perso"]
-    name = "Florent NOEL"
-    email = florent.noelfl@gmail.com
+[includeIf "gitdir:/mnt/dataz/dev/workspace/"]
+    path = .gitconfig_taf
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
