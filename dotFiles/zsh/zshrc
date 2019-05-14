@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/flo/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -77,10 +77,10 @@ alias grep='grep --color=auto'
 #alias autorandr='~/dev/utils/autorandr/autorandr'
 source $ZSH/oh-my-zsh.sh
 
-alias ls='ls --color=auto'
-alias ll='ls --group-directories-first --color=auto -lhFA'
-alias la='ls --color=auto -lah'
-alias lll='ls --color=auto -lh | less'
+#alias ls='ls --color=auto'
+#alias ll='ls --group-directories-first --color=auto -lhFA'
+#alias la='ls --color=auto -lah'
+#alias lll='ls --color=auto -lh | less'
 alias tigs='tig status'
 alias spotifyScaled='spotify --force-device-scale-factor=1.5'
 alias steamLibFix='LIBGL_DRI3_DISABLE=1 steam'
