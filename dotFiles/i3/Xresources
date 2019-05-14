@@ -1,18 +1,40 @@
+#include "/home/flo/.colours/solarized/xresources-colors-solarized/Xresources"
+
 Xft.antialias: 1
 Xft.hinting: 1
 Xft.rgba: rgb
 Xft.hintstyle: hintfull
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
-Xft.dpi: 192
+! Xft.dpi: 92
 
 URxvt.scrollBar: false
+URxvt.colorUL:  yellow
+URxvt.underlineColor:  yellow
 
 ! URxvt.font: xft:DejaVu Sans Mono:pixelsize=20
 ! URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=15:style=Bold
 
-URxvt.font: xft:mononoki-Regular:pixelsize=20
-URxvt.boldFont: xft:mononoki-bold:pixelsize=20:style=Bold
+! URxvt.font: xft:mononoki-Regular:pixelsize=20
+! URxvt.boldFont: xft:mononoki-bold:pixelsize=20:style=Bold
+
+! URxvt.font: xft:mononoki-regular-patched-mono:pixelsize=20
+! URxvt.boldFont: xft:mononoki-bold-patched-mono:pixelsize=20:style=Bold
+
+! URxvt.font: xft:mononoki\ Nerd\ Font\ Mono:pixelsize=15
+! URxvt.boldFont: xft:mononoki\ Nerd\ Font\ Mono:style=Bold:pixelsize=15
+! URxvt.italicFont: xft:mononoki\ Nerd\ Font\ Mono:style=Italic:pixelsize=15
+! URxvt.boldItalicFont: xft:mononoki\ Nerd\ Font\ Mono:style=BoldItalic:pixelsize=15
+
+! URxvt.font: xft:Fira Code:style=Regular:pixelsize=15
+! URxvt.boldFont: xft:Fira Code:style=Bold:pixelsize=15
+! URxvt.italicFont: xft:mononoki\ Nerd\ Font\ Mono:style=Italic:pixelsize=15
+! URxvt.boldItalicFont: xft:mononoki\ Nerd\ Font\ Mono:style=BoldItalic:pixelsize=15
+
+URxvt.font: xft:SauceCodePro\ Nerd\ Font\ Mono:pixelsize=15
+URxvt.boldFont: xft:SauceCodePro\ Nerd\ Font\ Mono:style=Bold:pixelsize=15
+URxvt.italicFont: xft:SauceCodePro\ Nerd\ Font\ Mono:style=Italic:pixelsize=15
+URxvt.boldItalicFont: xft:SauceCodePro\ Nerd\ Font\ Mono:style=BoldItalic:pixelsize=15
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard,resize-font
@@ -23,8 +45,6 @@ URxvt.saveLines: -1
 URxvt.underlineURLs:  true
 URxvt.urlLauncher: /usr/bin/firefox
 ! URxvt*matcher.button: 1
-
-! URxvt.colorUL: #4682B4
 
 ! copy and paste using ctrl+shift
 URxvt.iso14755: false
@@ -45,7 +65,6 @@ URxvt.keysym.C-S-Down: \033[1;6B
 URxvt.keysym.C-S-Right: \033[1;6C
 URXvt.keysym.C-S-Left: \033[1;6D]]]]]]]]]]]]]]
 
-URxvt.iso14755: False
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.keysym.M-c: perl:clipboard:copy
