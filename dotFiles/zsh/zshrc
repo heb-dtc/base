@@ -1,3 +1,5 @@
+export TERM="xterm-256color" # This sets up colors properly
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -7,7 +9,9 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="blinks"
+#ZSH_THEME='powerlevel10k/powerlevel10k'
 
+#POWERLEVEL9K_MODE='awesome-patched'
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -91,6 +95,7 @@ alias copier='xclip -selection clipboard'
 alias coller='xclip -selection clipboard -o'
 
 alias dc='docker-compose'
+alias love='/Applications/love.app/Contents/MacOS/love'
 
 alias gotoSickRage='echo localhost:8080; ssh -NL 8080:localhost:8081 flo@hebus.net'
 alias gotoCouchPotatoes='echo localhost:8080; ssh -NL 8080:localhost:5050 flo@hebus.net'
@@ -124,8 +129,8 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
 fi
 ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
 
-powerline-daemon -q
-. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#powerline-daemon -q
+#. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
