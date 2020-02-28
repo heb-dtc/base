@@ -15,30 +15,13 @@ URxvt.underlineColor:  yellow
 ! URxvt.letterSpace: 1
 
 ! URxvt.font: xft:DejaVu Sans Mono:pixelsize=20
-! URxvt.boldFont: xft:DejaVu Sans Mono:pixelsize=15:style=Bold
+!URxvt.font: xft:mononoki-regular-patched-mono:pixelsize=12
+!    xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=9
+!    xft:PowerlineSymbols, \
+!    xft:FontAwesome:size=5
 
-! URxvt.font: xft:mononoki-Regular:pixelsize=15
-! URxvt.boldFont: xft:mononoki-Bold:pixelsize=15:style=Bold
-! URxvt.italicFont: xft:mononoki-Italic:style=Italic:pixelsize=15
-! URxvt.boldItalicFont: xft:mononoki-BoldItalic:style=BoldItalic:pixelsize=15
-
-! URxvt.font: xft:mononoki-regular-patched-mono:pixelsize=20
-! URxvt.boldFont: xft:mononoki-bold-patched-mono:pixelsize=20:style=Bold
-
-! URxvt.font: xft:mononoki\ Nerd\ Font\ Mono:pixelsize=15
-! URxvt.boldFont: xft:mononoki\ Nerd\ Font\ Mono:style=Bold:pixelsize=15
-! URxvt.italicFont: xft:mononoki\ Nerd\ Font\ Mono:style=Italic:pixelsize=15
-! URxvt.boldItalicFont: xft:mononoki\ Nerd\ Font\ Mono:style=BoldItalic:pixelsize=15
-
-! URxvt.font: xft:Fira Code:style=Regular:pixelsize=15
-! URxvt.boldFont: xft:Fira Code:style=Bold:pixelsize=15
-! URxvt.italicFont: xft:mononoki\ Nerd\ Font\ Mono:style=Italic:pixelsize=15
-! URxvt.boldItalicFont: xft:mononoki\ Nerd\ Font\ Mono:style=BoldItalic:pixelsize=15
-
+!URxvt.font: xft:mononoki\ Nerd\ Font\ Mono:pixelsize=13
 !URxvt.font: xft:SauceCodePro\ Nerd\ Font\ Mono:pixelsize=13
-!URxvt.boldFont: xft:SauceCodePro\ Nerd\ Font\ Mono:style=Bold:pixelsize=13
-!URxvt.italicFont: xft:SauceCodePro\ Nerd\ Font\ Mono:style=Italic:pixelsize=13
-!URxvt.boldItalicFont: xft:SauceCodePro\ Nerd\ Font\ Mono:style=BoldItalic:pixelsize=13
 
 URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=13:antialias=true:hinting=true, \
     xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=9
