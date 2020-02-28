@@ -1,5 +1,18 @@
 icons = "awesome"
-theme="solarized-dark"
+
+[theme]
+name = "solarized-dark"
+[theme.overrides]
+idle_bg = "#212121"
+critical_bg = "#e57373"
+good_bg = "#a6bc69"
+info_bg = "#fac863"
+
+[[block]]
+block = "custom"
+command = "./bin/music.sh" 
+on_click = "./bin/mpc_toggle.sh"
+interval = 1
 
 [[block]]
 block = "disk_space"
@@ -53,4 +66,3 @@ block = "battery"
 block = "time"
 interval = 60
 format = "%a %d/%m %R"
-
