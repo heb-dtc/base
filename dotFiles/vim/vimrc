@@ -1,7 +1,7 @@
 " VIM configuration flo
 call pathogen#infect()
 
-set encoding=UTF-8
+set encoding=utf-8
 
 " Disable compatibility with Vi
 set nocompatible
@@ -29,11 +29,12 @@ set hlsearch
 set visualbell
 set noerrorbells
 
-" set t_Co=16
+set t_Co=256
 syntax enable
 " let g:solarized_termcolors=16
-set background=dark " dark|light "
-colorscheme solarized
+" set background=dark " dark|light "
+" colorscheme solarized
+colorscheme minimalist 
 filetype plugin indent on
 set cursorline
 set colorcolumn=80
@@ -73,6 +74,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 " enable jsx syntax highlighting
 let g:jsx_ext_required = 0
+
+let g:airline_theme='minimalist'
 
 set nofoldenable
 

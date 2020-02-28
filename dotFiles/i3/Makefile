@@ -6,8 +6,9 @@ I3_BLOCKS = $(HOME)/.i3blocks.conf
 X_INIT_RC = $(HOME)/.xinitrc
 X_RESOURCES = $(HOME)/.Xresources
 X_DEFAULTS = $(HOME)/.Xdefaults
+OXIDE_COLOURS = $(HOME)/.colours/oxide.colours
 
-all: $(I3_STATUS) $(I3_CONFIG) $(I3_BLOCKS) $(X_INIT_RC) $(X_RESSOURCES) $(X_DEFAULTS)
+all: $(I3_STATUS) $(I3_CONFIG) $(I3_BLOCKS) $(X_INIT_RC) $(X_RESSOURCES) $(X_DEFAULTS) $(OXIDE_COLOURS)
 
 $(I3_STATUS): i3status.conf
 	ln -sf $(CURRENT_DIR)/i3status.conf $(I3_STATUS)
@@ -26,5 +27,8 @@ $(X_RESOURCES): Xresources
 
 $(X_DEFAULTS): Xdefaults
 	ln -sf $(CURRENT_DIR)/Xdefaults $(X_DEFAULTS)
+
+$(OXIDE_COLOURS): oxide.colours
+	ln -sf $(CURRENT_DIR)/oxide.colours $(OXIDE_COLOURS)
 
 .PHONY: all

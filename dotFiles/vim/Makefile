@@ -28,5 +28,6 @@ plugins:
 	git clone https://github.com/jistr/vim-nerdtree-tabs $(PLUGINS_DIR)/vim-nerdtree-tabs
 	git clone https://github.com/ctrlpvim/ctrlp.vim $(PLUGINS_DIR)/ctrlp
 	git clone https://github.com/derekwyatt/vim-fswitch $(PLUGINS_DIR)/fswitch
+	git clone https://github.com/dikiaap/minimalist $(PLUGINS_DIR)/minimalist
 
 .PHONY: all

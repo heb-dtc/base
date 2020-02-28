@@ -6,7 +6,8 @@ export ZSH=/home/flo/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="blinks"
+#ZSH_THEME="blinks"
+ZSH_THEME="oxide"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,11 +59,11 @@ export ANDROID_HOME=$HOME/dev/tools/android-sdk-linux
 
 export ANDROID_NDK_HOME=$HOME/dev/utils/android-ndk-r10e
 
-export PATH="/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/tools/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/tools/android-sdk-linux/platform-tools:/home/flo/dev/tools/android-sdk-linux/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/tools/android-sdk-linux/tools/bin"
+export PATH="/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/tools/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/tools/android-sdk-linux/platform-tools:/home/flo/dev/tools/android-sdk-linux/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/tools/android-sdk-linux/tools/bin:/home/flo/dev/base/scripts:/home/flo/dev/tools/flutter/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 export GIT_EDITOR=nvim
 
-export JAVA_HOME='/usr/lib/jvm/java-8-openjdk'
+export JAVA_HOME='/usr/lib/jvm/java-13-openjdk'
 export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
 
 export QT_SELECT=5
@@ -125,7 +126,7 @@ fi
 ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
 
 powerline-daemon -q
-. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/lib/python3.8/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
