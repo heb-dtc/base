@@ -47,15 +47,18 @@ set nofoldenable
 " always show status bar
 set laststatus=2
 
+set guifont=Source\ Code\ Pro\ For\ Powerline
+
 syntax enable
+
+" let g:solarized_termcolors=16
+" set background=dark " dark|light "
 colorscheme minimalist 
+
 filetype plugin indent on
 set encoding=utf-8
 set t_Co=256
 
-" let g:solarized_termcolors=16
-" set background=dark " dark|light "
-" colorscheme solarized
 let mapleader="," 
 nmap <silent> <Leader>of :FSHere<CR> 
 nmap <silent> <Leader>or :FSSplitRight<CR> 
@@ -63,8 +66,8 @@ nmap <silent> <Leader>or :FSSplitRight<CR>
 " NERDTree.
 " ctrl-n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpandable = '>'
-let g:NERDTreeDirArrowCollapsible = '<'
+"let g:NERDTreeDirArrowExpandable = '>'
+"let g:NERDTreeDirArrowCollapsible = '<'
 
 "let g:ctrlp_map = ’<leader>c’
 " Default parameters for ack
