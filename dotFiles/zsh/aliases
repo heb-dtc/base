@@ -1,0 +1,31 @@
+alias cat='bat'
+
+alias gw='./gradlew'
+
+alias grep='grep --color=auto'
+
+alias ls='ls --color=auto'
+alias ll='ls --group-directories-first --color=auto -lhFA'
+alias la='ls --color=auto -lah'
+alias lll='ls --color=auto -lh | less'
+
+alias tigs='tig status'
+
+alias spotifyScaled='spotify --force-device-scale-factor=1.5'
+
+alias steamLibFix='LIBGL_DRI3_DISABLE=1 steam'
+
+alias hangout='google-chrome-stable --app-id=knipolnnllmklapflnccelgolnpehhpl'
+
+alias pocket='google-chrome-stable --app-id=mjcnijlhddpbdemagnpefmlkjdagkogk'
+
+alias copier='xclip -selection clipboard'
+alias coller='xclip -selection clipboard -o'
+
+alias dc='docker-compose'
+
+alias gotoSickRage='echo localhost:8080; ssh -NL 8080:localhost:8081 flo@hebus.net'
+alias gotoCouchPotatoes='echo localhost:8080; ssh -NL 8080:localhost:5050 flo@hebus.net'
+
+alias workspace='cd /mnt/dataz/dev/workspace'
+#alias autorandr='~/dev/utils/autorandr/autorandr'

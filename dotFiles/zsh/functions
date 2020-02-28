@@ -1,0 +1,14 @@
+# Weather
+weather() {
+    curl -s "https://wttr.in/${1:-Venice}?m2F&format=v2"
+}
+
+# Create a new directory and enter it
+mkd() {
+    mkdir -p "$@" && cd "$@"
+}
+
+makeBranch() {
+    local name=$1
+    git checkout -b $(echo "$(git --no-pager branch | grep '*' | cut -d " " -f2 | cut -d "-" -f2)-$name")
+}
