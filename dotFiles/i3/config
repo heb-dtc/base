@@ -288,6 +288,7 @@ exec --no-startup-id feh --randomize --bg-fill ~/wallpapers/batman.png
 exec --no-startup-id volumeicon
 #exec --no-startup-id blueman-applet
 #exec --no-startup-id xss-lock $Locker
+exec --no-startup-id dunst
 
 # Some rules for specific windows
 #for_window [class="Genymotion"] floating enable; move position 0px 0px;
