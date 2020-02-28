@@ -20,5 +20,7 @@ elif [ "$mode" == "intern" ]; then
     xrandr --output "$extern" --off --output "$intern" --auto
 elif [ "$mode" == "dual" ]; then
     xrandr --output "$extern" --above "$intern" --auto
+elif [ "$mode" == "set-real-black" ]; then
+    xrandr --output DP1 --set "Broadcast RGB" "Full"
 fi
 
