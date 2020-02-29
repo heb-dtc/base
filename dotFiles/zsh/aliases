@@ -5,6 +5,7 @@ alias gw='./gradlew'
 alias grep='grep --color=auto'
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias ll='ls -lhFA'
 else
     alias ls='ls --color=auto'
     alias ll='ls --group-directories-first --color=auto -lhFA'
