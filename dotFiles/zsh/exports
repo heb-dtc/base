@@ -1,13 +1,29 @@
-export PATH="/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/tools/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/tools/android-sdk-linux/platform-tools:/home/flo/dev/tools/android-sdk-linux/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/tools/android-sdk-linux/tools/bin:/home/flo/dev/base/scripts:/home/flo/dev/tools/flutter/bin"
+if [[ "$OSTYPE" == "darwin"* ]];then
+    export JAVA_HOME='/usr/lib/jvm/java-13-openjdk'
+    
+    export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
+    
+    export TEST='nop'
+    
+    export TERM="xterm-256color"
+    unset LSCOLORS
+    export CLICOLOR=1
+    export CLICOLOR_FORCE=1
+else 
+    export HEY='yes'
+    
+    export PATH="/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/tools/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/tools/android-sdk-linux/platform-tools:/home/flo/dev/tools/android-sdk-linux/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/tools/android-sdk-linux/tools/bin:/home/flo/dev/base/scripts:/home/flo/dev/tools/flutter/bin"
+    
+    export JAVA_HOME='/usr/lib/jvm/java-13-openjdk'
+    
+    export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
 
-export ANDROID_HOME=$HOME/dev/tools/android-sdk-linux
+    export GOPATH=/home/flo/dev/workspace/go_workspace
 
-export ANDROID_NDK_HOME=$HOME/dev/utils/android-ndk-r10e
+    export CCACHE_DIR=/home/flo/.ccache
+fi
 
 export GIT_EDITOR=nvim
-
-export JAVA_HOME='/usr/lib/jvm/java-13-openjdk'
-export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
 
 export QT_SELECT=5
 
@@ -18,11 +34,9 @@ export GREP_COLOR=31
 export VISUAL='nvim'
 
 export USE_CCACHE=1
-export CCACHE_DIR=/home/flo/.ccache
 
-export GOPATH=/home/flo/dev/workspace/go_workspace
-
-export BAT_THEME="Material-Theme-Darker"
+export ANDROID_HOME=$HOME/dev/tools/android-sdk-linux
+export ANDROID_NDK_HOME=$HOME/dev/utils/android-ndk-r10e
 
 # export LANG=en_US.UTF-8
 

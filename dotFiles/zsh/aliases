@@ -4,10 +4,13 @@ alias gw='./gradlew'
 
 alias grep='grep --color=auto'
 
-alias ls='ls --color=auto'
-alias ll='ls --group-directories-first --color=auto -lhFA'
-alias la='ls --color=auto -lah'
-alias lll='ls --color=auto -lh | less'
+if [[ "$OSTYPE" == "darwin"* ]]; then
+else
+    alias ls='ls --color=auto'
+    alias ll='ls --group-directories-first --color=auto -lhFA'
+    alias la='ls --color=auto -lah'
+    alias lll='ls --color=auto -lh | less'
+fi
 
 alias tigs='tig status'
 
@@ -29,3 +32,4 @@ alias gotoCouchPotatoes='echo localhost:8080; ssh -NL 8080:localhost:5050 flo@he
 
 alias workspace='cd /mnt/dataz/dev/workspace'
 #alias autorandr='~/dev/utils/autorandr/autorandr'
+alias pastel='$HOME/dev/tools/pastel/pastel'

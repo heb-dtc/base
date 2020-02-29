@@ -12,3 +12,8 @@ makeBranch() {
     local name=$1
     git checkout -b $(echo "$(git --no-pager branch | grep '*' | cut -d " " -f2 | cut -d "-" -f2)-$name")
 }
+
+addGitPushUrl() {
+    local repository=$1
+    git remote set-url --add --push origin $repository
+}
