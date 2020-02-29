@@ -8,6 +8,11 @@ mkd() {
     mkdir -p "$@" && cd "$@"
 }
 
+# Start SOMA FM
+soma() {
+    mpv https://somafm.com/groovesalad256.pls
+}
+
 makeBranch() {
     local name=$1
     git checkout -b $(echo "$(git --no-pager branch | grep '*' | cut -d " " -f2 | cut -d "-" -f2)-$name")
