@@ -1,5 +1,7 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    export PATH=/Users/flow/dev/tools/flutter/flutter/bin:$PATH
     export JAVA_HOME='/Library/Java/JavaVirtualMachines/adoptopenjdk-12.0.2.jdk/Contents/Home'
+    export ANDROID_HOME=$HOME/dev/tools/android/sdk
     
     export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
     
@@ -11,9 +13,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     
     export CLICOLOR_FORCE=1
 else 
-    export PATH="/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/tools/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/tools/android-sdk-linux/platform-tools:/home/flo/dev/tools/android-sdk-linux/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/tools/android-sdk-linux/tools/bin:/home/flo/dev/base/scripts:/home/flo/dev/tools/flutter/bin"
+    export PATH=/usr/lib64/ccache/bin:/home/flo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flo/dev/tools/android-studio/bin:/home/flo/taf/dev/utils:/home/flo/dev/tools/android-sdk-linux/platform-tools:/home/flo/dev/tools/android-sdk-linux/tools:/home/flo/dev/utils:/home/flo/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flo/.gem/ruby/2.3.0/bin:/home/flo/dev/tools/android-sdk-linux/tools/bin:/home/flo/dev/base/scripts:/home/flo/dev/tools/flutter/bin:$PATH
     
     export JAVA_HOME='/usr/lib/jvm/java-13-openjdk'
+    export ANDROID_HOME=$HOME/dev/tools/android-sdk-linux
     
     export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
 
@@ -34,7 +37,6 @@ export VISUAL='nvim'
 
 export USE_CCACHE=1
 
-export ANDROID_HOME=$HOME/dev/tools/android-sdk-linux
 export ANDROID_NDK_HOME=$HOME/dev/utils/android-ndk-r10e
 
 # export LANG=en_US.UTF-8
