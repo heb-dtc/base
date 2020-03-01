@@ -6,6 +6,30 @@ AVCONV="avconv"
 TAB_KEY=61
 ENTER_KEY=66
 
+function listAlarmsFor() {
+    if [ $# -ne 1 ]; then
+        echo "Usage: provide package name"
+        echo "Example: com.my.package"
+        return
+    fi
+
+    local package=$1
+
+    adb shell dumpsys alarm | grep $package -A5
+}
+
+function startMainActivity() {
+    if [ $# -ne 1 ]; then
+        echo "Usage: provide package name and activity name"
+        echo "Example: com.my.app/.myPackage.MyActivity"
+        return
+    fi
+
+    local activity=$1
+
+    adb shell am start -n $activity -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
+}
+
 function appLogin() {
      if [ $# -ne 2 ]; then
         echo "Usage: provide a username and a password"
@@ -277,13 +301,6 @@ function deviceChangeDate() {
     local newDate=$1
 
     adb shell date -s newDate
-}
-
-function apkList() {
-    local apkPath=$PROJECT_NAME$OUTPUT_DIR_SUFFIX
-    echo "listing content of" $apkPath
-
-    ls $apkPath
 }
 
 function deviceInstall() {
