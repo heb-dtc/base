@@ -297,6 +297,28 @@ function deviceTakeScreenshot() {
     adb shell screencap -p | sed 's/\r$//' > $screenshotPath
 }
 
+function deviceTakeScreenshot-alt() {
+    if [ $# -ne 1 ]; then
+        echo "Usage: provide a name for the screenshot"
+        echo "Example: deviceTakeScreenshot myScreenshot" >&2
+        return
+    fi
+
+    local screenshotName=$1.png
+    local screenshotPath=$SCREENSHOT_DESTINATION_FOLDER/$screenshotName
+
+    if [ ! -d "$SCREENSHOT_DESTINATION_FOLDER" ]; then
+        echo "Destination folder doesnt exist, creating it now..."
+        mkdir $SCREENSHOT_DESTINATION_FOLDER
+    fi
+
+    echo "Destination file:" $screenshotName
+    echo "Destination folder:" $SCREENSHOT_DESTINATION_FOLDER
+
+    adb shell screencap -p /sdcard/$screenshotName
+    adb pull /sdcard/$screenshotName $screenshotPath
+}
+
 function deviceChangeDate() {
     local newDate=$1
 
