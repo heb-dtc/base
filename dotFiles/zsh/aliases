@@ -34,3 +34,6 @@ alias gotoCouchPotatoes='echo localhost:8080; ssh -NL 8080:localhost:5050 flo@he
 alias workspace='cd /mnt/dataz/dev/workspace'
 #alias autorandr='~/dev/utils/autorandr/autorandr'
 alias pastel='$HOME/dev/tools/pastel/pastel'
+alias dv='dnote view'
+alias dr='dnote remove'
+aliad da='dnote add'
