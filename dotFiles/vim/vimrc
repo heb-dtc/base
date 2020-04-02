@@ -13,8 +13,8 @@ set wrap
 set scrolloff=3
 
 " indent properly
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 set autoindent " Copy indent from last line when starting new line
@@ -66,6 +66,7 @@ nmap <silent> <Leader>or :FSSplitRight<CR>
 " NERDTree.
 " ctrl-n to toggle NERDTree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 "let g:NERDTreeDirArrowExpandable = '>'
 "let g:NERDTreeDirArrowCollapsible = '<'
 
