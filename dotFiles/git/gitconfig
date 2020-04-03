@@ -52,7 +52,7 @@
 [includeIf "gitdir:/mnt/dataz/dev/workspace/"]
     path = .gitconfig_taf
 
-[includeIf "gitdir:/home/flo/dev/workspace/jobs/shamanx/"]
+[includeIf "gitdir:~/dev/workspace/jobs/shamanx/"]
     path = .gitconfig_shamanx
 
 [filter "lfs"]
