@@ -70,6 +70,13 @@ let NERDTreeShowHidden=1
 "let g:NERDTreeDirArrowExpandable = '>'
 "let g:NERDTreeDirArrowCollapsible = '<'
 
+" CtrlP
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](node_modules)',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+
 "let g:ctrlp_map = ’<leader>c’
 " Default parameters for ack
 "let g:ackprg="ack -H --nocolor --nogroup --column" 
@@ -85,6 +92,7 @@ hi clear signColumn
 " Airline settings
 " show for tabs
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1
