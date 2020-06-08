@@ -29,5 +29,10 @@ plugins:
 	git clone https://github.com/ctrlpvim/ctrlp.vim $(PLUGINS_DIR)/ctrlp
 	git clone https://github.com/derekwyatt/vim-fswitch $(PLUGINS_DIR)/fswitch
 	git clone https://github.com/dikiaap/minimalist $(PLUGINS_DIR)/minimalist
+	git clone https://github.com/leafgarland/typescript-vim.git $(PLUGINS_DIR)/typescript-vim
+	git clone https://github.com/prettier/vim-prettier $(PLUGINS_DIR)/vim-prettier
+	git clone https://github.com/pangloss/vim-javascript.git $(PLUGINS_DIR)/vim-javascript
+	git clone https://github.com/plasticboy/vim-markdown.git $(PLUGINS_DIR)/vim-markdown
+	git clone https://github.com/ycm-core/YouCompleteMe.git $(PLUGINS_DIR)/YouCompleteMe
 
 .PHONY: all
