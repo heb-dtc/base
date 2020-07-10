@@ -16,12 +16,12 @@ EOF
 
 connectToTunnel() {
   echo "connecting to tunnel at $server on port $port for user $user"
-  ssh $user@$server -p $port -CN -L5027:localhost:5037 -R27183:localhost:27183
+  ssh $user@$server -p $port -CN -L5037:localhost:5037 -R27183:localhost:27183
 }
 
 openTunnel() {
   echo "opening tunnel to $server on port $port for user $user"
-  ssh $user@$server -p $port -CN -R5027:localhost:5037 -L27183:localhost:27183
+  ssh $user@$server -p $port -CN -R5037:localhost:5037 -L27183:localhost:27183
 }
 
 main() {
