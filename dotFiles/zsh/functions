@@ -14,7 +14,20 @@ soma() {
 }
 
 franceinfo() {
-    mpv http://direct.franceinfo.fr/live/franceinfo-lofi.mp3
+    #mpv http://direct.franceinfo.fr/live/franceinfo-lofi.mp3
+    mpv https://stream.radiofrance.fr/franceinfo/franceinfo.m3u8
+}
+
+franceinter() {
+    mpv https://stream.radiofrance.fr/franceinter/franceinter.m3u8
+}
+
+francemusique() {
+    mpv https://stream.radiofrance.fr/francemusique/francemusique.m3u8
+}
+
+fip() {
+    mpv https://stream.radiofrance.fr/fip/fip.m3u8
 }
 
 nova() {

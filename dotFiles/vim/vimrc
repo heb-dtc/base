@@ -108,3 +108,6 @@ au BufRead,BufNewFile *.kt  set filetype=kotlin
 au BufRead,BufNewFile *.jet set filetype=kotlin
 au Syntax kotlin source ~/.vim/syntax/kotlin.vim
 
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+

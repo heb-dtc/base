@@ -55,6 +55,9 @@
 [includeIf "gitdir:~/dev/workspace/jobs/shamanx/"]
     path = .gitconfig_shamanx
 
+[includeIf "gitdir:~/dev/workspace/jobs/curious/"]
+    path = .gitconfig_curious
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

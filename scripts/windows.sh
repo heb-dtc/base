@@ -1,7 +1,7 @@
 #!/bin/bash
 
-server='casimir.curious-company.com'
-port=22
+localAdbPort=5037
+localScrcpyPort=27183
 
 usage() {
     local programName
@@ -15,13 +15,34 @@ EOF
 }   
 
 connectToTunnel() {
+  session=$(curl -s localhost:6666/sessions/$id)
+  server=$(echo $session | jq '.server')
+  port=$(echo $session | jq '.port')
+  remoteAdbPort=$(echo $session | jq '.adbPort')
+  remoteScrcpyPort=$(echo $session | jq '.scrcpyPort')
+
   echo "connecting to tunnel at $server on port $port for user $user"
-  ssh $user@$server -p $port -CN -L5037:localhost:5037 -R27183:localhost:27183
+  echo "with sessionId $sessionId"
+  echo "remote adb server port is $remoteAdbPort"
+  echo "remote scrcpy port is $remoteScrcpyPort"
+
+  ssh $user@$server -p $port -CN -L5037:localhost:$remoteAdbServerPort -R$remoteScrcpyPort:localhost:27183
 }
 
 openTunnel() {
+  session=$(curl -s localhost:6666/sessions/new)
+  sessionId=$(echo $session | jq '.id')
+  server=$(echo $session | jq '.server')
+  port=$(echo $session | jq '.port')
+  remoteAdbPort=$(echo $session | jq '.adbPort')
+  remoteScrcpyPort=$(echo $session | jq '.scrcpyPort')
+
   echo "opening tunnel to $server on port $port for user $user"
-  ssh $user@$server -p $port -CN -R5037:localhost:5037 -L27183:localhost:27183
+  echo "sessionId is $sessionId"
+  echo "remote adb server port is $remoteAdbPort"
+  echo "remote scrcpy port is $remoteScrcpyPort"
+
+  ssh $user@$server -p $port -CN -R$remoteAdbPort:localhost:5037 -L27183:localhost:$remoteScrcpyPort
 }
 
 main() {
@@ -33,7 +54,7 @@ main() {
       ;;
   esac
 
-  while getopts "m:s:p:u:" option
+  while getopts "m:s:p:u:i:" option
   do
     case "${option}"
       in
@@ -41,6 +62,7 @@ main() {
       u) user=${OPTARG};;
       s) server=${OPTARG};;
       p) port=${OPTARG};;
+      i) id=${OPTARG};;
     esac
   done
 

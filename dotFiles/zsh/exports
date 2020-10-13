@@ -2,6 +2,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=/Users/flow/dev/tools/flutter/flutter/bin:$PATH
     export JAVA_HOME='/Library/Java/JavaVirtualMachines/adoptopenjdk-14.jdk/Contents/Home'
     export ANDROID_HOME=$HOME/dev/tools/android/sdk
+    export ANDROID_SDK_ROOT=$HOME/dev/tools/android/sdk
     
     export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
     
@@ -17,6 +18,7 @@ else
     
     export JAVA_HOME='/usr/lib/jvm/java-14-openjdk'
     export ANDROID_HOME=$HOME/dev/tools/android-sdk-linux
+    export ANDROID_SDK_ROOT=$HOME/dev/tools/android-sdk-linux
     
     export STUDIO_JDK='/usr/lib/jvm/java8-oracle'
 
