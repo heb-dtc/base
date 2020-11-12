@@ -1,0 +1,1 @@
+0 1 * * * root /home/admin/nextcloud_rsync.sh | tee -a /var/log/nextcloud_rsync/nextcloud_rsync.log 2>&1
