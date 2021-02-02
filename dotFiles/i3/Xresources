@@ -23,10 +23,10 @@ URxvt.underlineColor:  yellow
 !URxvt.font: xft:mononoki\ Nerd\ Font\ Mono:pixelsize=13
 !URxvt.font: xft:SauceCodePro\ Nerd\ Font\ Mono:pixelsize=13
 
-URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=13:antialias=true:hinting=true, \
-    xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=9
+URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=16:antialias=true:hinting=true, \
+    xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=12
     xft:PowerlineSymbols, \
-    xft:FontAwesome:size=5
+    xft:FontAwesome:size=8
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard,resize-font
