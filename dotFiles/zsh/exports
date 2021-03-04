@@ -27,15 +27,15 @@ else
     export CCACHE_DIR=/home/flo/.ccache
 fi
 
-export GIT_EDITOR=nvim
+export GIT_EDITOR=vim
 
 export QT_SELECT=5
 
-export EDITOR='nvim'
+export EDITOR='vim'
 
 export GREP_COLOR=31
 
-export VISUAL='nvim'
+export VISUAL='vim'
 
 export USE_CCACHE=1
 

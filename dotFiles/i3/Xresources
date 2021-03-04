@@ -1,5 +1,4 @@
-!#include "/home/flo/.colours/solarized/xresources-colors-solarized/Xresources"
-#include "/home/flo/.colours/oxide.colours"
+#include "/home/flow/.colours/oxide.colours"
 
 Xft.antialias: 1
 Xft.hinting: 1
@@ -7,31 +6,33 @@ Xft.rgba: rgb
 Xft.hintstyle: hintfull
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
-! Xft.dpi: 92
+Xft.dpi: 96
 
 URxvt.scrollBar: false
 URxvt.colorUL:  yellow
 URxvt.underlineColor:  yellow
 ! URxvt.letterSpace: 1
 
-! URxvt.font: xft:DejaVu Sans Mono:pixelsize=20
-!URxvt.font: xft:mononoki-regular-patched-mono:pixelsize=12
-!    xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=9
+!URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=16:antialias=true:hinting=true, \
+!    xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=12
 !    xft:PowerlineSymbols, \
-!    xft:FontAwesome:size=5
+!    xft:FontAwesome:size=8
 
-!URxvt.font: xft:mononoki\ Nerd\ Font\ Mono:pixelsize=13
-!URxvt.font: xft:SauceCodePro\ Nerd\ Font\ Mono:pixelsize=13
-
-URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=16:antialias=true:hinting=true, \
-    xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=12
-    xft:PowerlineSymbols, \
-    xft:FontAwesome:size=8
+URxvt.font: xft:Liberation Mono for Powerline:style=Regular:pixelsize=13,xft:PowerlineSymbols
+URxvt.boldFont: xft:Liberation Mono for Powerline:style=Bold:pixelsize=13
+URxvt.italicFont: xft:Liberation Mono for Powerline:style=Italic:pixelsize=13
+URxvt.boldItalicFont: xft:Liberation Mono for Powerline:style=BoldItalic:pixelsize=13
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard,resize-font
 URxvt.keysym.C-S-c: perl:clipboard:copy
 URxvt.keysym.C-S-v: perl:clipboard:paste
+
+! font resize
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
 
 URxvt.saveLines: -1
 URxvt.underlineURLs:  true

@@ -1,6 +1,6 @@
 #!/bin/bash
 intern=eDP1
-extern=DP1
+extern=DP3-3
 
 usage() {
     local programName
