@@ -7,6 +7,8 @@ Xft.hintstyle: hintfull
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault
 Xft.dpi: 96
+!Xft.dpi: 120
+
 
 URxvt.scrollBar: false
 URxvt.colorUL:  yellow
