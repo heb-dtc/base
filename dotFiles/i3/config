@@ -44,7 +44,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec i3-dmenu-desktop 
-bindsym $mod+space exec rofi -show run
+bindsym $mod+space exec rofi -show drun
 
 #-fn "-*-profont-*-*-*-*-11-*-*-*-*-*-*-*" -nb "#161616" -nf "#909737" -sb "#909737" -sf "#161616"
 

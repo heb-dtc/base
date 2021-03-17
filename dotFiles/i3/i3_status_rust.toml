@@ -12,7 +12,7 @@ name = "awesome5"
 [[block]]
 block = "music"
 buttons = ["play", "next"]
-hide_when_empty = true
+hide_when_empty = false
 
 [[block]]
 block = "disk_space"
