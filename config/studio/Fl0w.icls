@@ -1,0 +1,31 @@
+<scheme name="Fl0w" version="142" parent_scheme="Darcula">
+  <metaInfo>
+    <property name="created">2021-03-22T14:04:50</property>
+    <property name="ide">AndroidStudio</property>
+    <property name="ideVersion">4.1.2.0</property>
+    <property name="modified">2021-03-22T14:05:49</property>
+    <property name="originalScheme">Fl0w</property>
+  </metaInfo>
+  <attributes>
+    <option name="LOGCAT_ASSERT_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="9876aa" />
+      </value>
+    </option>
+    <option name="LOGCAT_DEBUG_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="6897bb" />
+      </value>
+    </option>
+    <option name="LOGCAT_INFO_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="6a8759" />
+      </value>
+    </option>
+    <option name="LOGCAT_WARNING_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="bbb529" />
+      </value>
+    </option>
+  </attributes>
+</scheme>
