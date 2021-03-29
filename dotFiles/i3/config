@@ -46,6 +46,9 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec i3-dmenu-desktop 
 bindsym $mod+space exec rofi -show drun
 
+# pop a notification showing current time and bat charge level
+bindsym $mod+t exec "~/bin/displatTimeAndBat"
+
 #-fn "-*-profont-*-*-*-*-11-*-*-*-*-*-*-*" -nb "#161616" -nf "#909737" -sb "#909737" -sf "#161616"
 
 # change focus
@@ -164,8 +167,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id "~/bin/vol 5%- unmute"
 #bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse set Master 5%+ unmute;"
 #bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse set Master 5%- unmute;"
 
-#bindsym XF86AudioNext exec playerctl next
-#bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
  
 # take a screenshot
 bindsym $mod+Shift+s exec "scrot ~/Images/Screenshot%Y-%m-%d%H:%M:%S.png"
@@ -234,7 +238,7 @@ bar {
 
   mode dock
   tray_output primary
-  tray_output DP1 
+  #tray_output DP3-3 
   position bottom
   
   font pango:Liberation Mono for Powerline, Font Awesome 5 Free, FontAwesome, 11

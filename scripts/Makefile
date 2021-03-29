@@ -7,3 +7,4 @@ scripts:
 	ln -sf $(CURRENT_DIR)/screens.sh $(SCRIPTS_DIR)/screens
 	ln -sf $(CURRENT_DIR)/change_volume.sh $(SCRIPTS_DIR)/vol
 	ln -sf $(CURRENT_DIR)/windows.sh $(SCRIPTS_DIR)/tunnel
+	ln -sf $(CURRENT_DIR)/time_notif.sh $(SCRIPTS_DIR)/displatTimeAndBat
