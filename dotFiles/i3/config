@@ -154,8 +154,8 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 20"
 
 # Volume using local script (output to notification)
 bindsym XF86AudioMute exec --no-startup-id "~/bin/vol mute"
-bindsym XF86AudioRaiseVolume exec --no-startup-id "~/bin/vol 5%+"
-bindsym XF86AudioLowerVolume exec --no-startup-id "~/bin/vol 5%- unmute"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "~/bin/vol +5%"
+bindsym XF86AudioLowerVolume exec --no-startup-id "~/bin/vol -5%"
 
 # Volume ALSA
 #bindsym XF86AudioMute exec --no-startup-id "amixer set Master toggle; pkill -RTMIN+10 i3blocks"
@@ -293,7 +293,7 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id feh --randomize --bg-fill ~/wallpapers/*
 exec --no-startup-id feh --randomize --bg-fill ~/wallpapers/batman.png
 #exec --no-startup-id volumeicon
-#exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-applet
 #exec --no-startup-id xss-lock $Locker
 exec --no-startup-id dunst
 
