@@ -20,10 +20,10 @@ URxvt.underlineColor:  yellow
 !    xft:PowerlineSymbols, \
 !    xft:FontAwesome:size=8
 
-URxvt.font: xft:Liberation Mono for Powerline:style=Regular:pixelsize=13,xft:PowerlineSymbols
-URxvt.boldFont: xft:Liberation Mono for Powerline:style=Bold:pixelsize=13
-URxvt.italicFont: xft:Liberation Mono for Powerline:style=Italic:pixelsize=13
-URxvt.boldItalicFont: xft:Liberation Mono for Powerline:style=BoldItalic:pixelsize=13
+URxvt.font: xft:Liberation Mono for Powerline:style=Regular:size=13,xft:PowerlineSymbols
+URxvt.boldFont: xft:Liberation Mono for Powerline:style=Bold:size=13
+URxvt.italicFont: xft:Liberation Mono for Powerline:style=Italic:size=13
+URxvt.boldItalicFont: xft:Liberation Mono for Powerline:style=BoldItalic:size=13
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard,resize-font
