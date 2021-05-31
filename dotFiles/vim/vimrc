@@ -1,5 +1,27 @@
 " VIM configuration flo
-call pathogen#infect()
+" call pathogen#infect()
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dikiaap/minimalist' 
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'altercation/vim-colors-solarized'
+Plug 'airblade/vim-gitgutter'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'derekwyatt/vim-fswitch'
+Plug 'leafgarland/typescript-vim'
+Plug 'prettier/vim-prettier'
+Plug 'pangloss/vim-javascript'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+" Plug '~/.vim/bundle/YouCompleteMe'
+Plug 'tpope/vim-sensible'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'blueyed/vim-diminactive'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+call plug#end()
 
 " Disable compatibility with Vi
 set nocompatible
@@ -55,6 +77,10 @@ syntax enable
 " set background=dark " dark|light "
 colorscheme minimalist 
 
+hi CocFloating ctermbg=8
+highlight ColorColumn ctermbg=0 guibg=#081C23
+highlight CursorColumn ctermbg=0 guibg=#FF0000 gui=NONE
+
 filetype plugin indent on
 set encoding=utf-8
 set t_Co=256
@@ -108,6 +134,55 @@ au BufRead,BufNewFile *.kt  set filetype=kotlin
 au BufRead,BufNewFile *.jet set filetype=kotlin
 au Syntax kotlin source ~/.vim/syntax/kotlin.vim
 
+" YouCompleteMe settings
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_auto_trigger = 1
+
+" coc settings
+" use TAB to trigger completion
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" use <c-space> to trigger completion
+inoremap <silent><expr> <c-@> coc#refresh()
+
+" Make <CR> auto-select the first completion item
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+map <C-b> :cnext<CR>
+map <C-v> :cprevious<CR>
