@@ -28,18 +28,21 @@ else
 fi
 
 export GIT_EDITOR=vim
-
 export QT_SELECT=5
-
 export EDITOR='vim'
-
 export GREP_COLOR=31
-
 export VISUAL='vim'
-
 export USE_CCACHE=1
-
 export ANDROID_NDK_HOME=$HOME/dev/utils/android-ndk-r10e
-
 # export LANG=en_US.UTF-8
 
+## NNN conf
+export TERMINAL=urxvt
+#NNN_PLUG_PERSONAL='g:personal/convert2zoom;p:personal/echo'
+#NNN_PLUG_WORK='j:work/prettyjson;d:work/foobar'              
+#NNN_PLUG_INLINE='e:!go run $nnn*'
+#NNN_PLUG_DEFAULT='1:bookmarks;2:ipinfo;v:preview-tui;o:fzz;b:nbak;i:imgview'
+export NNN_PLUG="v:preview-tui;f:fzf;i:imgview:1:bookmarks"
+export NNN_FCOLORS='0000E6310000000000000000'
+export NNN_FIFO="/tmp/nnn.fifo"
+export NNN_OPTS="H"
