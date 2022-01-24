@@ -4,7 +4,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dikiaap/minimalist' 
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'altercation/vim-colors-solarized'
@@ -15,11 +14,17 @@ Plug 'leafgarland/typescript-vim'
 Plug 'prettier/vim-prettier'
 Plug 'pangloss/vim-javascript'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'mcchrish/nnn.vim'
 " Plug '~/.vim/bundle/YouCompleteMe'
 Plug 'tpope/vim-sensible'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'blueyed/vim-diminactive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'sheerun/vim-polyglot'
+
+" themes
+Plug 'dikiaap/minimalist' 
+Plug 'joshdick/onedark.vim' 
 
 call plug#end()
 
@@ -75,7 +80,8 @@ syntax enable
 
 " let g:solarized_termcolors=16
 " set background=dark " dark|light "
-colorscheme minimalist 
+" colorscheme minimalist 
+colorscheme onedark
 
 hi CocFloating ctermbg=8
 highlight ColorColumn ctermbg=0 guibg=#081C23
@@ -126,7 +132,8 @@ let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline_powerline_fonts = 1
 " enable jsx syntax highlighting
 let g:jsx_ext_required = 0
-let g:airline_theme='minimalist'
+" let g:airline_theme='minimalist'
+let g:airline_theme='onedark'
 
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
