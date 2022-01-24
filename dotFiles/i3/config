@@ -289,13 +289,18 @@ bindsym $mod+a mode "$mode_screen"
 bindsym $mod+m exec pavucontrol
  
 # Start some tools 
-exec --no-startup-id nm-applet
-#exec --no-startup-id feh --randomize --bg-fill ~/wallpapers/*
-exec --no-startup-id feh --randomize --bg-fill ~/wallpapers/batman.png
-#exec --no-startup-id volumeicon
-exec --no-startup-id blueman-applet
-#exec --no-startup-id xss-lock $Locker
+#exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id feh --randomize --bg-fill ~/Nextcloud/wallpaper/*
+
+# start tray program (blueman-applet, nm-applet)
+exec_always --no-startup-id ~/.i3/tray.sh
+#exec --no-startup-id blueman-applet
+#exec --no-startup-id feh --randomize --bg-fill ~/wallpapers/*
+#exec --no-startup-id volumeicon
+#exec --no-startup-id xss-lock $Locker
+#exec --no-startup /usr/lib/kdeconnectd
+#exec --no-startup kdeconnect-indicator
 
 # Some rules for specific windows
 #for_window [class="Genymotion"] floating enable; move position 0px 0px;
