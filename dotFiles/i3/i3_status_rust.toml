@@ -2,9 +2,10 @@
 name = "solarized-dark"
 [theme.overrides]
 idle_bg = "#212121"
-critical_bg = "#e57373"
-good_bg = "#a6bc69"
-info_bg = "#fac863"
+critical_bg = "#E57373"
+critical_fg = "#E57373"
+good_bg = "#A6BC69"
+info_bg = "#FAC863"
 
 [icons] 
 name = "awesome5"
@@ -25,30 +26,30 @@ interval = 20
 [[block]]
 block = "memory"
 display_type = "memory"
-format_mem = "{Mug}GB/{MTg}GB"
+format_mem = "{mem_used;G}/{mem_total;G}"
 display_type = "memory"
 icons = true
 clickable = true
 interval = 5
 warning_mem = 80
 critical_mem = 95
-[block.color_overrides]
-idle_bg = "#c594c5"
+[block.theme_overrides]
+idle_bg = "#C594C5"
 idle_fg = "#212121"
 
 [[block]]
 block = "cpu"
 interval = 1
-[block.color_overrides]
-idle_bg = "#c594c5"
+[block.theme_overrides]
+idle_bg = "#C594C5"
 idle_fg = "#212121"
 
 [[block]]
 block = "load"
 interval = 1
 format = "{1m}"
-[block.color_overrides]
-idle_bg = "#c594c5"
+[block.theme_overrides]
+idle_bg = "#C594C5"
 idle_fg = "#212121"
 
 [[block]]
@@ -56,20 +57,30 @@ block = "xrandr"
 interval = 2
 icons = true
 resolution = true
-[block.color_overrides]
-idle_bg = "#5fb3b3"
+[block.theme_overrides]
+idle_bg = "#5FB3B3"
 idle_fg = "#212121"
 
 [[block]]
 block = "sound"
-[block.color_overrides]
-idle_bg = "#5fb3b3"
-idle_fg = "#00000"
+driver = "pulseaudio"
+device_kind = "source"
+[block.theme_overrides]
+idle_bg = "#5FB3B3"
+idle_fg = "#000000"
+
+[[block]]
+block = "sound"
+driver = "pulseaudio"
+device_kind = "sink"
+[block.theme_overrides]
+idle_bg = "#5FB3B3"
+idle_fg = "#000000"
 
 [[block]]
 block = "battery"
-[block.color_overrides]
-idle_bg = "#5fb3b3"
+[block.theme_overrides]
+idle_bg = "#5FB3B3"
 idle_fg = "#212121"
 
 [[block]]
