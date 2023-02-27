@@ -209,25 +209,8 @@ bindsym $mod+Ctrl+Left resize grow width 1 px or 1 ppt
 # finds out, if available)
 bar {
   colors {
-      ## config i3block
-      #background #3c3b37
-      #statusline #989898
-      #separator  #989898
-
-      # Type              border  background font
-      #focused_workspace  #008fff #007fff #ffffff
-      #active_workspace   #333333 #5f676a #ffffff
-      #inactive_workspace #333333 #222222 #888888
-      #urgent_workspace   #d98f93 #990000 #ffffff
-      
-      #focused_workspace #fdf6e3 #007fff #fdf6e3
-      #active_workspace #fdf6e3 #6c71c4 #fdf6e3
-      #inactive_workspace #002b36 #586e75 #002b36
-      #urgent_workspace #d33682 #d33682 #fdf6e3
-      
       ## config i3 status rust
       separator #666666
-      #background #222222
       background #212121
       statusline #dddddd
       focused_workspace #0088CC #0088CC #ffffff
@@ -238,13 +221,9 @@ bar {
 
   mode dock
   tray_output primary
-  #tray_output DP3-3 
   position bottom
   
-  font pango:Liberation Mono for Powerline, Font Awesome 5 Free, FontAwesome, 11
-
-  #status_command i3status -c ~/.i3/i3status.conf 
-  #status_command i3blocks 
+  font pango:Liberation Mono for Powerline, Font Awesome 6 Free, 11
   status_command i3status-rs ~/.i3/status_rs/i3_status_rust.toml
 }
 
@@ -291,12 +270,11 @@ bindsym $mod+m exec pavucontrol
 # Start some tools 
 #exec --no-startup-id nm-applet
 exec --no-startup-id dunst
-exec --no-startup-id feh --randomize --bg-fill ~/Nextcloud/wallpaper/*
+exec --no-startup-id feh --randomize --bg-fill ~/Nextcloud/wallpapers/currents/
 
 # start tray program (blueman-applet, nm-applet)
 exec_always --no-startup-id ~/.i3/tray.sh
 #exec --no-startup-id blueman-applet
-#exec --no-startup-id feh --randomize --bg-fill ~/wallpapers/*
 #exec --no-startup-id volumeicon
 #exec --no-startup-id xss-lock $Locker
 #exec --no-startup /usr/lib/kdeconnectd

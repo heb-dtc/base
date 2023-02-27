@@ -1,38 +1,61 @@
 [theme]
-name = "solarized-dark"
+theme = "solarized-dark"
+
 [theme.overrides]
 idle_bg = "#212121"
 critical_bg = "#E57373"
-critical_fg = "#E57373"
 good_bg = "#A6BC69"
 info_bg = "#FAC863"
+separator = "<span font='13.5'></span>"
 
 [icons] 
-name = "awesome5"
+icons = "awesome6"
+
+[[block]]
+block = "tea_timer"
+format = " $icon {$minutes:$seconds |}"
+done_cmd = "notify-send 'Timer Finished'"
+[block.icons_overrides]
+tea = "\uf2f2"
+[block.theme_overrides]
+idle_bg = "#2a9d8f"
+idle_fg = "#212121"
+
+[[block]]
+block = "pomodoro"
+format = " $icon { $message|} "
+notify_cmd = "notify-send '{msg}'"
+blocking_cmd = false
+[block.icons_overrides]
+pomodoro = "\uf254"
+[block.theme_overrides]
+idle_bg = "#e76f51"
+idle_fg = "#212121"
 
 [[block]]
 block = "music"
-buttons = ["play", "next"]
-hide_when_empty = false
+format = " $icon  {$player: $combo.str(max_w:25,rot_interval:0.5) $play $next |}"
 
 [[block]]
 block = "disk_space"
-path = "/"
-alias = "/"
+path = "/home"
 info_type = "available"
-unit = "GB"
+alert_unit = "GB"
 interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon /home $available.eng(w:2) "
+[block.theme_overrides]
+idle_bg = "#264653"
+idle_fg = "#ffffff"
 
 [[block]]
 block = "memory"
-display_type = "memory"
-format_mem = "{mem_used;G}/{mem_total;G}"
-display_type = "memory"
-icons = true
-clickable = true
 interval = 5
 warning_mem = 80
 critical_mem = 95
+format = " $icon $mem_used.eng(prefix:M)/$mem_total.eng(prefix:M) "
+format_alt = " $icon_swap $swap_used.eng(prefix:M)/$swap_total.eng(prefix:M) "
 [block.theme_overrides]
 idle_bg = "#C594C5"
 idle_fg = "#212121"
@@ -41,24 +64,15 @@ idle_fg = "#212121"
 block = "cpu"
 interval = 1
 [block.theme_overrides]
-idle_bg = "#C594C5"
+idle_bg = "#7678ed"
 idle_fg = "#212121"
 
 [[block]]
 block = "load"
 interval = 1
-format = "{1m}"
+format = " $icon 1min avg: $1m.eng(w:4) "
 [block.theme_overrides]
 idle_bg = "#C594C5"
-idle_fg = "#212121"
-
-[[block]]
-block = "xrandr"
-interval = 2
-icons = true
-resolution = true
-[block.theme_overrides]
-idle_bg = "#5FB3B3"
 idle_fg = "#212121"
 
 [[block]]
@@ -73,6 +87,9 @@ idle_fg = "#000000"
 block = "sound"
 driver = "pulseaudio"
 device_kind = "sink"
+[[block.click]]
+button = "left"
+cmd = "pavucontrol"
 [block.theme_overrides]
 idle_bg = "#5FB3B3"
 idle_fg = "#000000"
@@ -80,10 +97,10 @@ idle_fg = "#000000"
 [[block]]
 block = "battery"
 [block.theme_overrides]
-idle_bg = "#5FB3B3"
+idle_bg = "#eae2b7"
 idle_fg = "#212121"
 
 [[block]]
 block = "time"
-interval = 60
-format = "%a %d/%m %R"
+interval = 5
+format = " $timestamp.datetime(f:'%a %d/%m %R') "
