@@ -34,6 +34,14 @@ nova() {
     mpv http://broadcast.infomaniak.net/radionova-high.mp3
 }
 
+spaceOdyssey() {
+   mpv https://spaceodyssey-mynoise.radioca.st/stream
+}
+
+rainyDay() {
+   mpv https://rainyday-mynoise.radioca.st/stream
+}
+
 makeBranch() {
     local name=$1
     git checkout -b $(echo "$(git --no-pager branch | grep '*' | cut -d " " -f2 | cut -d "-" -f2)-$name")
