@@ -3,7 +3,8 @@ theme = "solarized-dark"
 
 [theme.overrides]
 idle_bg = "#212121"
-critical_bg = "#E57373"
+critical_bg = "#d00000"
+warning_bg = "#ff6d00"
 good_bg = "#A6BC69"
 info_bg = "#FAC863"
 separator = "<span font='13.5'></span>"
@@ -18,7 +19,7 @@ done_cmd = "notify-send 'Timer Finished'"
 [block.icons_overrides]
 tea = "\uf2f2"
 [block.theme_overrides]
-idle_bg = "#2a9d8f"
+idle_bg = "#8ae9fd"
 idle_fg = "#212121"
 
 [[block]]
@@ -35,6 +36,9 @@ idle_fg = "#212121"
 [[block]]
 block = "music"
 format = " $icon  {$player: $combo.str(max_w:25,rot_interval:0.5) $play $next |}"
+[block.theme_overrides]
+idle_bg = "#FAC863"
+idle_fg = "#212121"
 
 [[block]]
 block = "disk_space"
@@ -47,7 +51,7 @@ alert = 10.0
 format = " $icon /home $available.eng(w:2) "
 [block.theme_overrides]
 idle_bg = "#264653"
-idle_fg = "#ffffff"
+idle_fg = "#212121"
 
 [[block]]
 block = "memory"
@@ -80,8 +84,8 @@ block = "sound"
 driver = "pulseaudio"
 device_kind = "source"
 [block.theme_overrides]
-idle_bg = "#5FB3B3"
-idle_fg = "#000000"
+idle_bg = "#f9844a"
+idle_fg = "#212121"
 
 [[block]]
 block = "sound"
@@ -91,13 +95,41 @@ device_kind = "sink"
 button = "left"
 cmd = "pavucontrol"
 [block.theme_overrides]
-idle_bg = "#5FB3B3"
-idle_fg = "#000000"
+idle_bg = "#f9844a"
+idle_fg = "#212121"
+
+[[block]]
+block = "backlight"
+[block.theme_overrides]
+idle_bg = "#f9c74f"
+idle_fg = "#212121"
+
+[[block]]
+block = "custom"
+command = "echo \uf030"
+interval = "once"
+[[block.click]]
+button = "left"
+cmd = "~/base/scripts/screenshot.sh"
+[block.theme_overrides]
+idle_bg = "#90be6d"
+idle_fg = "#212121"
+
+[[block]]
+block = "custom"
+command = "echo \ue163"
+interval = "once"
+[[block.click]]
+button = "left"
+cmd = "~/base/scripts/update_dpi.sh"
+[block.theme_overrides]
+idle_bg = "#43aa8b"
+idle_fg = "#212121"
 
 [[block]]
 block = "battery"
 [block.theme_overrides]
-idle_bg = "#eae2b7"
+idle_bg = "#577590"
 idle_fg = "#212121"
 
 [[block]]
