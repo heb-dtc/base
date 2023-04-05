@@ -3,7 +3,7 @@
 mkdir -p ~/Pictures
 
 # open screenshot tool
-scrot -s -q 100 -o ~/Pictures/screenshot.png
+scrot -s -q 100 -o ~/Pictures/screenshot.jpg
 
 # play a "Camera shutter" sound
 paplay /usr/share/sounds/freedesktop/stereo/screen-capture.oga &

@@ -13,6 +13,7 @@ Plug 'derekwyatt/vim-fswitch'
 Plug 'leafgarland/typescript-vim'
 Plug 'prettier/vim-prettier'
 Plug 'pangloss/vim-javascript'
+Plug 'peitalin/vim-jsx-typescript'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'mcchrish/nnn.vim'
 " Plug '~/.vim/bundle/YouCompleteMe'
@@ -21,6 +22,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'blueyed/vim-diminactive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sheerun/vim-polyglot'
+Plug 'davisdude/vim-love-docs', { 'branch': 'build' }
 
 " themes
 Plug 'dikiaap/minimalist' 
@@ -60,6 +62,7 @@ set noerrorbells
 
 set cursorline
 set colorcolumn=80
+set showcmd
 
 set backspace=indent,eol,start
 
@@ -148,11 +151,16 @@ let g:ycm_auto_trigger = 1
 
 " coc settings
 " use TAB to trigger completion
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
 function! s:check_back_space() abort
   let col = col('.') - 1

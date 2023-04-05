@@ -3,8 +3,8 @@ theme = "solarized-dark"
 
 [theme.overrides]
 idle_bg = "#212121"
-critical_bg = "#d00000"
-warning_bg = "#ff6d00"
+critical_bg = "#e76f51"
+warning_bg = "#f9844a"
 good_bg = "#A6BC69"
 info_bg = "#FAC863"
 separator = "<span font='13.5'></span>"
@@ -17,7 +17,7 @@ block = "tea_timer"
 format = " $icon {$minutes:$seconds |}"
 done_cmd = "notify-send 'Timer Finished'"
 [block.icons_overrides]
-tea = "\uf2f2"
+tea = "\uf017"
 [block.theme_overrides]
 idle_bg = "#8ae9fd"
 idle_fg = "#212121"
@@ -28,14 +28,14 @@ format = " $icon { $message|} "
 notify_cmd = "notify-send '{msg}'"
 blocking_cmd = false
 [block.icons_overrides]
-pomodoro = "\uf254"
+pomodoro = "\uf1da"
 [block.theme_overrides]
 idle_bg = "#e76f51"
 idle_fg = "#212121"
 
 [[block]]
 block = "music"
-format = " $icon  {$player: $combo.str(max_w:25,rot_interval:0.5) $play $next |}"
+format = " $icon  {$player.str(max_w:7): $combo.str(max_w:20,rot_interval:0.5) $play $next |}"
 [block.theme_overrides]
 idle_bg = "#FAC863"
 idle_fg = "#212121"
@@ -50,7 +50,7 @@ warning = 20.0
 alert = 10.0
 format = " $icon /home $available.eng(w:2) "
 [block.theme_overrides]
-idle_bg = "#264653"
+idle_bg = "#577590"
 idle_fg = "#212121"
 
 [[block]]
@@ -84,7 +84,7 @@ block = "sound"
 driver = "pulseaudio"
 device_kind = "source"
 [block.theme_overrides]
-idle_bg = "#f9844a"
+idle_bg = "#f28482"
 idle_fg = "#212121"
 
 [[block]]
@@ -95,7 +95,7 @@ device_kind = "sink"
 button = "left"
 cmd = "pavucontrol"
 [block.theme_overrides]
-idle_bg = "#f9844a"
+idle_bg = "#f28482"
 idle_fg = "#212121"
 
 [[block]]

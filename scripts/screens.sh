@@ -1,6 +1,8 @@
 #!/bin/bash
 intern=eDP1
-extern=DP3-3
+#extern=DP3-3
+#externTwo=DP1
+extern=DP1
 
 usage() {
     local programName
@@ -11,6 +13,7 @@ Usage: $programName [-option]
 Options:
     --help Print this message
     -dual Dual screen setup
+    -three Three screens setup
     -extern Only external screen setup
     -intern Only internal screen setup
     -frgb Apply full rgb mode to external screen to have real blacks
@@ -30,6 +33,8 @@ setupScreen() {
         xrandr --output "$extern" --off --output "$intern" --auto
     elif [ "$mode" == "dual" ]; then
         xrandr --output "$extern" --above "$intern" --auto
+    elif [ "$mode" == "three" ]; then
+        xrandr --output "$extern" --above "$externTwo" --right-of "$intern" --auto
     fi
 }
 
