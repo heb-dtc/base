@@ -21,7 +21,7 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
   use('tpope/vim-fugitive')
-  
+
   use('scrooloose/nerdtree')
 
   use {
@@ -46,4 +46,36 @@ return require('packer').startup(function(use)
           {'rafamadriz/friendly-snippets'}, -- Optional
       }
   }
+
+  use {
+      'https://github.com/davisdude/vim-love-docs',
+      branch="build"
+  }
+
+  use('jose-elias-alvarez/null-ls.nvim')
+
+  use {
+      "folke/which-key.nvim",
+      config = function()
+          vim.o.timeout = true
+          vim.o.timeoutlen = 300
+          require("which-key").setup {
+              -- your configuration comes here
+              -- or leave it empty to use the default settings
+              -- refer to the configuration section below
+          }
+      end
+  }
+
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
+
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+  end}
+
  end)

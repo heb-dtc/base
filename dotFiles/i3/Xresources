@@ -6,8 +6,6 @@ Xft.rgba: rgb
 Xft.hintstyle: hintfull
 Xft.autohint: false
 Xft.lcdfilter: lcddefault
-! Xft.dpi: 96
-! Xft.dpi: 120
 
 URxvt.scrollBar: false
 URxvt.colorUL:  yellow
@@ -29,6 +27,11 @@ URxvt.font: xft:LiterationMono Nerd Font Mono:style=Regular:size=12:antialias=tr
 URxvt.boldFont: xft:LiterationMono Nerd Font Mono:style=Bold:size=12:antialias=true:hinting=true
 URxvt.italicFont: xft:LiterationMono Nerd Font Mono:style=Italic:size=12:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:LiterationMono Nerd Font Mono:style=Bold Italic:size=12:antialias=true:hinting=true
+
+!URxvt.font: xft:FiraCode Nerd Font Mono:style=Regular:size=12:antialias=true:hinting=true
+!URxvt.boldFont: xft:FiraCode Nerd Font Mono:style=Bold:size=12:antialias=true:hinting=true
+!URxvt.italicFont: xft:FiraCode Nerd Font Mono:style=Italic:size=12:antialias=true:hinting=true
+!URxvt.boldItalicFont: xft:FiraCode Nerd Font Mono:style=Bold Italic:size=12:antialias=true:hinting=true
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard,resize-font
@@ -73,5 +76,4 @@ URxvt.keysym.M-v: perl:clipboard:paste
 ! URxvt.clipboard.copycmd:  xsel -ib
 ! URxvt.clipboard.pastecmd: xsel -ob
 
-! Xft.dpi: 96
 Xft.dpi: 96
