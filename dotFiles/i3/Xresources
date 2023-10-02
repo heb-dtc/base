@@ -18,20 +18,10 @@ URxvt.letterSpace: -1
 !URxvt.transparent: true 
 !URxvt.shading: 25
 
-!URxvt*font: xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=16:antialias=true:hinting=true, \
-!    xft:Source\ Code\ Pro\ for\ Powerline:pixelsize=12
-!    xft:PowerlineSymbols, \
-!    xft:FontAwesome:size=8
-
-URxvt.font: xft:LiterationMono Nerd Font Mono:style=Regular:size=12:antialias=true:hinting=true
-URxvt.boldFont: xft:LiterationMono Nerd Font Mono:style=Bold:size=12:antialias=true:hinting=true
-URxvt.italicFont: xft:LiterationMono Nerd Font Mono:style=Italic:size=12:antialias=true:hinting=true
-URxvt.boldItalicFont: xft:LiterationMono Nerd Font Mono:style=Bold Italic:size=12:antialias=true:hinting=true
-
-!URxvt.font: xft:FiraCode Nerd Font Mono:style=Regular:size=12:antialias=true:hinting=true
-!URxvt.boldFont: xft:FiraCode Nerd Font Mono:style=Bold:size=12:antialias=true:hinting=true
-!URxvt.italicFont: xft:FiraCode Nerd Font Mono:style=Italic:size=12:antialias=true:hinting=true
-!URxvt.boldItalicFont: xft:FiraCode Nerd Font Mono:style=Bold Italic:size=12:antialias=true:hinting=true
+URxvt.font: xft:Hack Nerd Font Mono:style=Regular:size=12:antialias=true:hinting=true
+URxvt.boldFont: xft:Hack Nerd Font Mono:style=Bold:size=12:antialias=true:hinting=true
+URxvt.italicFont: xft:Hack Nerd Font Mono:style=Italic:size=12:antialias=true:hinting=true
+URxvt.boldItalicFont: xft:Hack Nerd Font Mono:style=Bold Italic:size=12:antialias=true:hinting=true
 
 URxvt.perl-lib: .urxvt/perl
 URxvt.perl-ext-common: default,clipboard,resize-font
@@ -76,4 +66,4 @@ URxvt.keysym.M-v: perl:clipboard:paste
 ! URxvt.clipboard.copycmd:  xsel -ib
 ! URxvt.clipboard.pastecmd: xsel -ob
 
-Xft.dpi: 96
+Xft.dpi: 120
