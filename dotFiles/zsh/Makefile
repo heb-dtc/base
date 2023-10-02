@@ -5,10 +5,8 @@ ALIASES = $(HOME)/.aliases
 EXPORTS = $(HOME)/.exports
 FUNCTIONS = $(HOME)/.functions
 DIRCOLORS = $(HOME)/.dircolors
-ANDROID_TOOLS = $(HOME)/.oh-my-zsh/custom/androiddevtoolez.zsh
-GIF_TOOLS = $(HOME)/.oh-my-zsh/custom/gifitup.zsh
 
-all: zsh_rc android_tools gif_tools
+all: zsh_rc themes
 
 zsh_rc: zshrc
 	ln -snf $(CURRENT_DIR)/exports $(EXPORTS)
@@ -17,10 +15,8 @@ zsh_rc: zshrc
 	ln -snf $(CURRENT_DIR)/dircolors $(DIRCOLORS)
 	ln -snf $(CURRENT_DIR)/zshrc $(ZSH_RC)
 
-android_tools: androiddevtoolez.zsh
-	ln -sfn $(CURRENT_DIR)/androiddevtoolez.zsh $(ANDROID_TOOLS)
-
-gif_tools: gifitup.zsh
-	ln -sfn $(CURRENT_DIR)/gifitup.zsh $(GIF_TOOLS)
+themes: heb.zsh-theme old_heb.zsh-theme
+	sudo ln -snf $(CURRENT_DIR)/old_heb.zsh-theme /usr/share/oh-my-zsh/custom/themes/old_heb.zsh-theme
+	sudo ln -snf $(CURRENT_DIR)/heb.zsh-theme /usr/share/oh-my-zsh/custom/themes/heb.zsh-theme
 
 .PHONY: all
