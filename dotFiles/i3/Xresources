@@ -11,6 +11,7 @@ URxvt.scrollBar: false
 URxvt.colorUL:  yellow
 URxvt.underlineColor:  yellow
 URxvt.letterSpace: -1
+Urxvt.geometry: 80x-1
 !URxvt.depth: 32
 !URxvt.termName: rxvt-unicode 
 !URxvt.borderless: 0
@@ -23,10 +24,19 @@ URxvt.boldFont: xft:Hack Nerd Font Mono:style=Bold:size=12:antialias=true:hintin
 URxvt.italicFont: xft:Hack Nerd Font Mono:style=Italic:size=12:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:Hack Nerd Font Mono:style=Bold Italic:size=12:antialias=true:hinting=true
 
-URxvt.perl-lib: .urxvt/perl
-URxvt.perl-ext-common: default,clipboard,resize-font
-URxvt.keysym.C-S-c: perl:clipboard:copy
-URxvt.keysym.C-S-v: perl:clipboard:paste
+! enable extensions
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,resize-font
+
+! URL click open on default browser
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1 
+
+! copy and paste configuration
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.Shift-Control-C: eval:selection-to-clipboard
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 
 ! font resize
 URxvt.keysym.C-minus:     resize-font:smaller
@@ -37,7 +47,6 @@ URxvt.keysym.C-question:  resize-font:show
 URxvt.saveLines: -1
 URxvt.underlineURLs:  true
 URxvt.urlLauncher: /usr/bin/firefox
-! URxvt*matcher.button: 1
 
 ! copy and paste using ctrl+shift
 URxvt.iso14755: false
@@ -57,13 +66,5 @@ URxvt.keysym.C-S-Up: \033[1;6A
 URxvt.keysym.C-S-Down: \033[1;6B
 URxvt.keysym.C-S-Right: \033[1;6C
 URXvt.keysym.C-S-Left: \033[1;6D]]]]]]]]]]]]]]
-
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.keysym.M-c: perl:clipboard:copy
-URxvt.keysym.M-v: perl:clipboard:paste
-
-! URxvt.clipboard.copycmd:  xsel -ib
-! URxvt.clipboard.pastecmd: xsel -ob
 
 Xft.dpi: 120
