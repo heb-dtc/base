@@ -2,11 +2,25 @@ local lsp = require('lsp-zero').preset({
   name = 'minimal',
   set_lsp_keymaps = true,
   manage_nvim_cmp = true,
-  suggest_lsp_servers = false,
+  suggest_lsp_servers = true,
+})
+
+lsp.ensure_installed({
+    'tsserver',
+    'eslint',
 })
 
 -- (Optional) Configure lua language server for neovim
 lsp.nvim_workspace()
+
+-- local cmp = require('cmp')
+-- local cmp_mappings = lsp.defaults.cmp_mappings({
+--     ["<C-space>"] = cmp.complete()
+-- })
+
+-- lsp.setup_nvim_cmp({
+--     mapping = cmp_mappings
+-- })
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
