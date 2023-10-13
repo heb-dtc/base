@@ -11,7 +11,7 @@ URxvt.scrollBar: false
 URxvt.colorUL:  yellow
 URxvt.underlineColor:  yellow
 URxvt.letterSpace: -1
-Urxvt.geometry: 80x-1
+URxvt.geometry: 80x-3
 !URxvt.depth: 32
 !URxvt.termName: rxvt-unicode 
 !URxvt.borderless: 0
@@ -19,8 +19,8 @@ Urxvt.geometry: 80x-1
 !URxvt.transparent: true 
 !URxvt.shading: 25
 
-URxvt.font: xft:Hack Nerd Font Mono:style=Regular:size=12:antialias=true:hinting=true
-URxvt.boldFont: xft:Hack Nerd Font Mono:style=Bold:size=12:antialias=true:hinting=true
+URxvt.font: xft:Hack Nerd Font Mono:style=Regular:size=12
+URxvt.boldFont: xft:Hack Nerd Font Mono:style=Bold:size=12
 URxvt.italicFont: xft:Hack Nerd Font Mono:style=Italic:size=12:antialias=true:hinting=true
 URxvt.boldItalicFont: xft:Hack Nerd Font Mono:style=Bold Italic:size=12:antialias=true:hinting=true
 

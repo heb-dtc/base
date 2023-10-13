@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=FirefoxPro
+Exec=firefox -P curious
+Comment=
+Terminal=false
+Icon=/home/flow/.local/share/applications/firefox-profile-chooser-2.png
+Type=Application

@@ -16,7 +16,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 else 
     export PATH=/usr/lib64/ccache/bin:/home/flow/bin:/home/flow/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/flow/dev/tools/android-studio/bin:/home/flow/taf/dev/utils:/home/flow/dev/tools/android-sdk-linux/platform-tools:/home/flow/dev/tools/android-sdk-linux/tools:/home/flow/dev/utils:/home/flow/dev/tools/astyle/build/gcc/bin:/usr/bin/vendor_perl/:/usr/local/go/bin:/home/flow/.gem/ruby/2.3.0/bin:/home/flow/dev/tools/android-sdk-linux/tools/bin:/home/flow/dev/base/scripts:/home/flow/dev/tools/flutter/bin:$PATH
     
-    export JAVA_HOME='/usr/lib/jvm/java-15-openjdk'
+    export JAVA_HOME='/usr/lib/jvm/java-17-openjdk'
     export ANDROID_HOME=$HOME/dev/tools/android-sdk-linux
     export ANDROID_SDK_ROOT=$HOME/dev/tools/android-sdk-linux
     

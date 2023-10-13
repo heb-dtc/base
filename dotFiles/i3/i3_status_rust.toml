@@ -1,3 +1,5 @@
+icons_format = " <span font_family='Font Awesome 6 Free'>{icon}</span> "
+
 [theme]
 theme = "solarized-dark"
 
@@ -35,7 +37,7 @@ idle_fg = "#212121"
 
 [[block]]
 block = "music"
-format = " $icon  {$player.str(max_w:7): $combo.str(max_w:20,rot_interval:0.5) $play $next |}"
+format = " $icon {$player.str(max_w:7): $combo.str(max_w:20,rot_interval:0.5) $play $next |}"
 [block.theme_overrides]
 idle_bg = "#FAC863"
 idle_fg = "#212121"

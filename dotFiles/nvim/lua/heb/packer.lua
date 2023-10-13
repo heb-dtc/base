@@ -1,15 +1,19 @@
 vim.cmd([[packadd packer.nvim]])
 
-return require("packer").startup(function(use)
+local packer = require("packer")
+
+packer.init({
+    log = { level = 'error' }
+})
+
+return packer.startup({function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
-	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
-		-- or                            , branch = '0.1.x',
+	use{
+		"nvim-telescope/telescope.nvim", tag = "0.1.4",
 		requires = { { "nvim-lua/plenary.nvim" } },
-	})
+	}
 
 	use({
 		"EdenEast/nightfox.nvim",
@@ -84,4 +88,11 @@ return require("packer").startup(function(use)
 	})
 
 	use("mbbill/undotree")
-end)
+
+    use("udalov/kotlin-vim")
+end,
+config = {
+    display = {
+        open_fn = require('packer.util').float,
+    }
+}})
