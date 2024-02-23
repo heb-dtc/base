@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("n", "<C-n>", vim.cmd.NERDTreeToggle)
+vim.keymap.set("n", "<C-n>", vim.cmd.Neotree)
 
 vim.keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format()
