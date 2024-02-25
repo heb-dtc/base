@@ -67,13 +67,7 @@
 [pull]
     rebase = true
 
-[includeIf "gitdir:/mnt/dataz/dev/workspace/"]
-    path = .gitconfig_taf
-
-[includeIf "gitdir:~/dev/workspace/jobs/shamanx/"]
-    path = .gitconfig_shamanx
-
-[includeIf "gitdir:~/dev/workspace/jobs/curious/"]
+[includeIf "gitdir:~/dev/workspace/curious/"]
     path = .gitconfig_curious
 
 [includeIf "gitdir:~/dev/workspace/jobs/curious/nextory/"]

@@ -36,6 +36,7 @@ export USE_CCACHE=1
 export ANDROID_NDK_HOME=$HOME/dev/utils/android-ndk-r10e
 # export LANG=en_US.UTF-8
 export TERMINAL=urxvt
+export PAGER="less -R"
 
 ## NNN conf
 export NNN_PLUG="p:preview-tui;t:preview-tabbed;f:fzf;j:autojump;i:imgview;v:vidthumb;1:bookmarks"

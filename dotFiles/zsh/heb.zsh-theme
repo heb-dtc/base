@@ -44,7 +44,7 @@ oxide_reset_color="%f"
 
 # VCS style formats.
 FMT_UNSTAGED="%{$oxide_reset_color%} %{$oxide_orange%}●"
-FMT_STAGED="%{$oxide_reset_color%} %{$oxide_limegreen%}✚"
+FMT_STAGED="%{$oxide_reset_color%} %{$oxide_limegreen%}+"
 FMT_ACTION="(%{$oxide_limegreen%}%a%{$oxide_reset_color%})"
 FMT_VCS_STATUS="on %{$oxide_turquoise%} %b%u%c%{$oxide_reset_color%}"
 

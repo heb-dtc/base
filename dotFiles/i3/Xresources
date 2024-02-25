@@ -67,4 +67,4 @@ URxvt.keysym.C-S-Down: \033[1;6B
 URxvt.keysym.C-S-Right: \033[1;6C
 URXvt.keysym.C-S-Left: \033[1;6D]]]]]]]]]]]]]]
 
-Xft.dpi: 120
+Xft.dpi: 96

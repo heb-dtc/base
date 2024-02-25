@@ -42,6 +42,26 @@ format = " $icon {$player.str(max_w:7): $combo.str(max_w:20,rot_interval:0.5) $p
 idle_bg = "#FAC863"
 idle_fg = "#212121"
 
+# [[block]]
+# block = "custom"
+# command = "echo '{\"icon\": \"\uf0230\",\"state\": \"Critical\",\"text\": \"Danger!\"}'"
+# json = true
+
+[[block]]
+block = "disk_space"
+path = "/home/flow/dataz"
+info_type = "available"
+alert_unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
+format = " $icon $available.eng(w:2) "
+[block.icons_overrides]
+disk_drive = "\uf023"
+[block.theme_overrides]
+idle_bg = "#577590"
+idle_fg = "#212121"
+
 [[block]]
 block = "disk_space"
 path = "/home"
@@ -50,7 +70,7 @@ alert_unit = "GB"
 interval = 20
 warning = 20.0
 alert = 10.0
-format = " $icon /home $available.eng(w:2) "
+format = " $icon $available.eng(w:2) "
 [block.theme_overrides]
 idle_bg = "#577590"
 idle_fg = "#212121"
