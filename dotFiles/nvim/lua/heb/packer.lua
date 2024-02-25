@@ -44,7 +44,7 @@ return packer.startup({
 
 		use({
 			"VonHeikemen/lsp-zero.nvim",
-			branch = "v1.x",
+			branch = "v3.x",
 			requires = {
 				-- LSP Support
 				{ "neovim/nvim-lspconfig" }, -- Required
@@ -110,6 +110,8 @@ return packer.startup({
 			"nvim-lualine/lualine.nvim",
 			requires = { "nvim-tree/nvim-web-devicons", opt = true },
 		})
+
+        use("github/copilot.vim")
 	end,
 	config = {
 		display = {

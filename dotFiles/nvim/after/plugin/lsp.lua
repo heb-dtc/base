@@ -1,38 +1,40 @@
-local lsp = require("lsp-zero").preset({
-	name = "minimal",
-	set_lsp_keymaps = true,
-	manage_nvim_cmp = true,
-	suggest_lsp_servers = true,
-})
+local lsp = require("lsp-zero")
 
-lsp.ensure_installed({
-	"tsserver",
-	"eslint",
+require("mason").setup({})
+require("mason-lspconfig").setup({
+	ensure_installed = { "tsserver", "eslint" },
+	handlers = {
+		lsp.default_setup,
+		lua_ls = function()
+			local lua_opts = lsp.nvim_lua_ls()
+			require("lspconfig").lua_ls.setup(lua_opts)
+		end,
+	},
 })
 
 -- (Optional) Configure lua language server for neovim
-lsp.nvim_workspace()
+-- lsp.nvim_workspace()
 
 local cmp = require("cmp")
---local cmp_format = lsp.cmp_format()
--- local cmp_mappings = lsp.defaults.cmp_mappings({
--- 	["<C-space>"] = cmp.complete(),
--- })
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "buffer" },
+		{ name = "luasnip", keyword_length = 2 },
+		{ name = "buffer", keyword_length = 3 },
 	},
-
-	-- mapping = cmp.mapping.preset.insert({
-	-- 	["<C-space>"] = cmp.complete(),
-	-- }),
-
+	mapping = cmp.mapping.preset.insert({
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
+		["<C-e>"] = cmp.mapping.abort(),
+		["<C-Space>"] = cmp.mapping.complete(),
+	}),
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
 	},
+	formatting = lsp.cmp_format(),
 })
 
 lsp.on_attach(function(client, bufnr)
