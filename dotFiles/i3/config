@@ -202,7 +202,7 @@ bar {
 
 # Lock and power management stuff
 # Locker is starting i3lock and forces dpms off to turn off the screen immediately
-set $Locker i3lock -c ff8b94 -i ~/.i3/Pictures/lock.png && xset dpms force off
+set $Locker i3lock -c 8232FF && xset dpms force off
 bindsym $mod+Shift+l exec $Locker
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown

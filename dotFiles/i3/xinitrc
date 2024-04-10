@@ -3,7 +3,13 @@
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 setxkbmap -layout us -variant intl
 
-xidlehook --not-when-audio --not-when-fullscreen --timer 360 "i3lock -n -c ff8b94" "" &
+#xidlehook --not-when-audio --not-when-fullscreen --timer 360 "i3lock -n -c ff8b94" "" &
+xidlehook  \
+    --not-when-audio \
+    --not-when-fullscreen \
+    --timer 360 \
+    "i3lock -n -c 8232FF" "" \
+    &
 
 exec i3
 #exec xss-lock i3lock -n -i ~/.i3/Pictures/lock.png &
