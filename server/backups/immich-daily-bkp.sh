@@ -12,7 +12,7 @@ docker exec -t immich_postgres pg_dumpall -c -U postgres | gzip > "$LOCAL_BKP_DI
 
 if [ $? -eq 0 ]; then
   # report to stato
-  /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"cubbit immich backup","date":"' + $(date) + '", "status": "running"}' https://stato.hebus.net/report
+  /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"cubbit immich backup","date":"'"$(date)"'", "status": "running"}' https://stato.hebus.net/report
 
   # copy DB dump to cubbit
   /usr/bin/rclone -v sync $LOCAL_BKP_DIR/dump.sql.gz $CUBBIT_REMOTE:db --progress 
@@ -23,22 +23,22 @@ if [ $? -eq 0 ]; then
     if [ $? -ne 0 ]; then
       echo "Failed to copy photos to cubbit." >&2
       # report to stato
-      /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"cubbit immich backup","date":"' + $(date) + '", "status": "failed"}' https://stato.hebus.net/report
+      /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"cubbit immich backup","date":"'"$(date)"'", "status": "failed"}' https://stato.hebus.net/report
       exit 1
     fi
   else
       echo "Failed to copy DB to cubbit." >&2
       # report to stato
-      /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"cubbit immich backup","date":"' + $(date) + '", "status": "failed"}' https://stato.hebus.net/report
+      /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"cubbit immich backup","date":"'"$(date)"'", "status": "failed"}' https://stato.hebus.net/report
       exit 1
   fi
 
   echo "backup to cubbit successful"
   # report to stato
-  /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"cubbit immich backup","date":"' + $(date) + '", "status": "done"}' https://stato.hebus.net/report
+  /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"cubbit immich backup","date":"'"$(date)"'", "status": "done"}' https://stato.hebus.net/report
 
   # report to stato
-  /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"b2 immich backup","date":"' + $(date) + '", "status": "running"}' https://stato.hebus.net/report
+  /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"b2 immich backup","date":"'"$(date)"'", "status": "running"}' https://stato.hebus.net/report
   # copy DB dump to b2
   /usr/bin/rclone -v sync $LOCAL_BKP_DIR/dump.sql.gz $B2_REMOTE:db --progress 
 
@@ -48,19 +48,19 @@ if [ $? -eq 0 ]; then
     if [ $? -ne 0 ]; then
       echo "Failed to copy photos to b2." >&2
       # report to stato
-      /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"b2 immich backup","date":"' + $(date) + '", "status": "failed"}' https://stato.hebus.net/report
+      /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"b2 immich backup","date":"'"$(date)"'", "status": "failed"}' https://stato.hebus.net/report
       exit 1
     fi
   else
       echo "Failed to copy DB to b2." >&2
       # report to stato
-      /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"b2 immich backup","date":"' + $(date) + '", "status": "failed"}' https://stato.hebus.net/report
+      /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"b2 immich backup","date":"'"$(date)"'", "status": "failed"}' https://stato.hebus.net/report
       exit 1
   fi
 
   echo "backup to b2 successful"
   # report to stato
-  /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"b2 immich backup","date":"' + $(date) + '", "status": "done"}' https://stato.hebus.net/report
+  /usr/bin/curl --header "Authorization: Bearer 466489" --header "Content-Type: application/json" --request POST --data '{"server":"mars","task_id":"1", "task":"b2 immich backup","date":"'"$(date)"'", "status": "done"}' https://stato.hebus.net/report
 
 else
   echo "The database dump failed." >&2
