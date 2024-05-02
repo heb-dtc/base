@@ -1,0 +1,4 @@
+MAILTO=""
+0 4 * * * nice -n10 /home/flow/bkp/scripts/immich-daily-bkp.sh > /home/flow/bkp/log/immich-backup.log 2>&1
+
+
