@@ -46,6 +46,7 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 #bindsym $mod+d exec i3-dmenu-desktop 
 bindsym $mod+space exec rofi -show drun
+bindsym $mod+Tab exec rofi -show window
 
 # pop a notification showing current time and bat charge level
 bindsym $mod+t exec "~/bin/displatTimeAndBat"
@@ -242,8 +243,9 @@ bindsym $mod+a mode "$mode_screen"
 bindsym $mod+m exec pavucontrol
 
 # Start some tools 
+#exec --no-startup-id picom
 exec --no-startup-id dunst
-exec --no-startup-id feh --randomize --bg-fill ~/Nextcloud/wallpapers/currents/
+exec --no-startup-id feh --randomize --bg-fill ~/ariane6.jpg
 
 # start tray program (blueman-applet, nm-applet)
 exec_always --no-startup-id ~/.i3/tray.sh

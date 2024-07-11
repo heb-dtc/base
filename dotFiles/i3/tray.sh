@@ -8,5 +8,6 @@ pkill -f qckm
 pasystray --notify=all &
 blueman-applet &
 nm-applet --indicator &
+udiskie -t &
 qckm &
 

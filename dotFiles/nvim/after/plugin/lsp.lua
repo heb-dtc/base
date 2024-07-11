@@ -7,6 +7,9 @@ lsp.set_sign_icons({
 	info = "»",
 })
 
+-- enable logging
+-- vim.lsp.set_log_level("trace")
+
 require("mason").setup({})
 require("mason-lspconfig").setup({
 	ensure_installed = { "tsserver", "eslint" },

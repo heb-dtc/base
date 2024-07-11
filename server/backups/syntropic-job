@@ -1,0 +1,2 @@
+MAILTO=""
+0 4 * * * nice -n10 /home/flo/bkp/scripts/syntropic-daily-bkp.sh > /home/flo/bkp/log/syntropic-backup.log 2>&1

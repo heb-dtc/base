@@ -69,6 +69,8 @@ source ~/.functions
 
 eval "$(jump shell)"
 
+eval "$(fzf --zsh)"
+
 # dircolors
 if [ -x "$(command -v dircolors)" ]; then
     eval "$(dircolors -b ~/.dircolors)"
