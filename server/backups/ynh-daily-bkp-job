@@ -1,0 +1,2 @@
+MAILTO=""
+0 2 * * * root nice -n10 /home/flow/bkp/app_backup.sh | tee -a /var/log/app-backup.log 2>&1

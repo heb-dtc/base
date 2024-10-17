@@ -1,0 +1,2 @@
+MAILTO=""
+0 1 * * * root /home/admin/bkp/nextcloud_data_bkp.sh | tee -a /var/log/nextcloud_data.log 2>&1
