@@ -5,7 +5,7 @@ ARCH_DIR="/home/yunohost.backup/archives"
 APPS="gitea baikal syncthing"
 DATE=$(date +%Y-%m-%d)
 
-echo "Starting daily apps backup at: $DATE"
+echo "Starting daily apps backup at: $(date)"
 
 if [ -d $BKP_DIR.bak ]; then rm -rf $BKP_DIR.bak; fi
 
